@@ -162,6 +162,11 @@ router.get('/api/patern/devices/all',Auth.authAccessToken,function (req, res){
     Devices.ReadAll(req,res)
 })
 
+router.get('/api/patern/devices/all/data',Auth.authAccessToken,function (req, res){
+    futil.logger.debug('\n' + futil.shtm() + '- [ REQ HEADERS ] | INFO ' + util.inspect(req.headers));
+    Devices.ReadAllData(req,res)
+})
+
 router.put('/api/patern/devices/:id',Auth.authAccessToken,function (req, res){
     futil.logger.debug('\n' + futil.shtm() + '- [ REQ HEADERS ] | INFO ' + util.inspect(req.headers));
     futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY ] | INFO ' + util.inspect(req.body));
