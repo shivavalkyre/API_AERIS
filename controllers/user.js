@@ -185,6 +185,80 @@ var ReadPetugas = async function(req,res){
     }
 }
 
+var ReadAdmin = async function(req,res){
+    //  try {
+    //     const user = await User.findAll();
+    //     futil.logger.debug('\n' + futil.shtm() + '- [ RESULT ] | QUERING ' + util.inspect(user));
+    //     res.send(user);
+    // } catch (err) {
+    //     futil.logger.debug('\n' + futil.shtm() + '- [ ERROR ] | QUERING ' + util.inspect(err));
+    // }
+    // futil.logger.debug('\n' + futil.shtm() + '- [ REQUEST USER ] | INFO');
+
+    try {
+        
+        const user = await User.findAll({
+            raw:true,
+            where: {
+                level : {[Op.like]: '%administrator%'}
+              },
+            order: [
+                ['id', 'ASC'],
+                ]
+        });
+        futil.logger.debug('\n' + futil.shtm() + '- [ RESULT USER ] | QUERING ' + util.inspect(user));
+        result.code = 200
+        result.status ="success"
+        result.data = user
+        res.send(result);
+        // res.status(200).send(task);
+    } catch (err) {
+        futil.logger.debug('\n' + futil.shtm() + '- [ ERROR ] | QUERING ' + util.inspect(err));
+        result.code = 400
+        result.status ="failed"
+        result.data = "Read data failed"
+        res.send(result);
+    }
+}
+
+var ReadAdminSelected = async function(req,res){
+    //  try {
+    //     const user = await User.findAll();
+    //     futil.logger.debug('\n' + futil.shtm() + '- [ RESULT ] | QUERING ' + util.inspect(user));
+    //     res.send(user);
+    // } catch (err) {
+    //     futil.logger.debug('\n' + futil.shtm() + '- [ ERROR ] | QUERING ' + util.inspect(err));
+    // }
+    // futil.logger.debug('\n' + futil.shtm() + '- [ REQUEST USER ] | INFO');
+
+    try {
+        var createdby = parseInt(req.headers.createdby)
+
+        const user = await User.findAll({
+            raw:true,
+            where: {
+                level : {[Op.like]: '%administrator%'},
+                createdBy : createdby
+              },
+            order: [
+                ['id', 'ASC'],
+                ]
+        });
+        futil.logger.debug('\n' + futil.shtm() + '- [ RESULT USER ] | QUERING ' + util.inspect(user));
+        result.code = 200
+        result.status ="success"
+        result.data = user
+        res.send(result);
+        // res.status(200).send(task);
+    } catch (err) {
+        futil.logger.debug('\n' + futil.shtm() + '- [ ERROR ] | QUERING ' + util.inspect(err));
+        result.code = 400
+        result.status ="failed"
+        result.data = "Read data failed"
+        res.send(result);
+    }
+}
+
 var Update = async function (req,res){
     try {
         const user = await User.update(req.body, {
@@ -230,6 +304,8 @@ module.exports = {
     Read,
     ReadAll,
     ReadPetugas,
+    ReadAdmin,
+    ReadAdminSelected,
     Update,
     Delete
 }

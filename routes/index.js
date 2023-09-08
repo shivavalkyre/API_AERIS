@@ -138,6 +138,14 @@ router.get('/api/patern/users/chat',Auth.authAccessToken,function (req, res){
     User.ReadPetugas(req,res)
 })
 
+router.get('/api/patern/users/admin',Auth.authAccessToken,function (req, res){
+    User.ReadAdmin(req,res)
+})
+
+router.get('/api/patern/users/admin/selected',Auth.authAccessToken,function (req, res){
+    User.ReadAdminSelected(req,res)
+})
+
 router.put('/api/patern/users/:id',Auth.authAccessToken,function (req, res){
     futil.logger.debug('\n' + futil.shtm() + '- [ REQ HEADERS ] | INFO ' + util.inspect(req.headers));
     futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY ] | INFO ' + util.inspect(req.body));
