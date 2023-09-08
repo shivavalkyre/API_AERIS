@@ -99,22 +99,22 @@ var Read = async function(req,res){
 var ReadAllData = async function(req,res){
     try {    
 
-        futil.logger.debug('\n' + futil.shtm() + '- [ REQ PARAMS ] | INFO ' + util.inspect(req.headers));
-        futil.logger.debug('\n' + futil.shtm() + '- [ REQ PARAMS  page] | INFO ' + util.inspect(req.headers.page));
-        futil.logger.debug('\n' + futil.shtm() + '- [ REQ PARAMS  rows] | INFO ' + util.inspect(req.headers.rows));
-        futil.logger.debug('\n' + futil.shtm() + '- [ REQ PARAMS  offset] | INFO ' + util.inspect(req.headers.offset));
-        futil.logger.debug('\n' + futil.shtm() + '- [ REQ PARAMS  createdby] | INFO ' + util.inspect(req.headers.createdby));
+        // futil.logger.debug('\n' + futil.shtm() + '- [ REQ PARAMS ] | INFO ' + util.inspect(req.headers));
+        // futil.logger.debug('\n' + futil.shtm() + '- [ REQ PARAMS  page] | INFO ' + util.inspect(req.headers.page));
+        // futil.logger.debug('\n' + futil.shtm() + '- [ REQ PARAMS  rows] | INFO ' + util.inspect(req.headers.rows));
+        // futil.logger.debug('\n' + futil.shtm() + '- [ REQ PARAMS  offset] | INFO ' + util.inspect(req.headers.offset));
+        // futil.logger.debug('\n' + futil.shtm() + '- [ REQ PARAMS  createdby] | INFO ' + util.inspect(req.headers.createdby));
         
         
-        var limit = parseInt(req.headers.rows)
-        var offset = parseInt(req.headers.offset)
-        var page = parseInt(req.headers.page)
-        var createdby = parseInt(req.headers.createdby)
+        // var limit = parseInt(req.headers.rows)
+        // var offset = parseInt(req.headers.offset)
+        // var page = parseInt(req.headers.page)
+        // var createdby = parseInt(req.headers.createdby)
 
         const count = await Device.count();
         futil.logger.debug('\n' + futil.shtm() + '- [ RESULT COUNT ] | QUERING ' + util.inspect(count));
 
-        var resp = await Device.findAll({ offset: offset, limit: limit,raw:true,
+        var resp = await Device.findAll({ raw:true,
             order: [
                 ['id', 'ASC'],
                 ]
@@ -123,17 +123,17 @@ var ReadAllData = async function(req,res){
             futil.logger.debug('\n' + futil.shtm() + '- [ RESULT DEVICE] | QUERING ' + util.inspect(resp));
             // var rows_data = []
             // rows_data.push(result)
-            var j
-            if (offset == 0 ){
-                j=1
-            }else{
-                j= (offset * (page-1))+1
-            }
+            // var j
+            // if (offset == 0 ){
+            //     j=1
+            // }else{
+            //     j= (offset * (page-1))+1
+            // }
 
-            for (i=0;i<=resp.length-1;i++){
-                resp[i].no = j
-                j++
-            }
+            // for (i=0;i<=resp.length-1;i++){
+            //     resp[i].no = j
+            //     j++
+            // }
 
             var response = {"total":count,"rows":resp}   
             futil.logger.debug('\n' + futil.shtm() + '- [ RESULT RESPONSE] | QUERING ' + util.inspect(response));  
