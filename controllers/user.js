@@ -206,7 +206,7 @@ var ReadAdmin = async function(req,res){
                 ['id', 'ASC'],
                 ]
         });
-        futil.logger.debug('\n' + futil.shtm() + '- [ RESULT USER ] | QUERING ' + util.inspect(user));
+        futil.logger.debug('\n' + futil.shtm() + '- [ RESULT USER ADMIN ] | QUERING ' + util.inspect(user));
         result.code = 200
         result.status ="success"
         result.data = user
