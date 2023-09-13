@@ -196,7 +196,7 @@ var ReadAdmin = async function(req,res){
     // futil.logger.debug('\n' + futil.shtm() + '- [ REQUEST USER ] | INFO');
 
     try {
-        
+        const count = await User.count()
         const user = await User.findAll({
             raw:true,
             where: {
@@ -207,6 +207,7 @@ var ReadAdmin = async function(req,res){
                 ]
         });
         futil.logger.debug('\n' + futil.shtm() + '- [ RESULT USER ADMIN ] | QUERING ' + util.inspect(user));
+        var response = {"total":count,"rows":user}  
         result.code = 200
         result.status ="success"
         result.data = user
@@ -244,6 +245,8 @@ var ReadAdminSelected = async function(req,res){
                 ['id', 'ASC'],
                 ]
         });
+
+         
         futil.logger.debug('\n' + futil.shtm() + '- [ RESULT USER ] | QUERING ' + util.inspect(user));
         result.code = 200
         result.status ="success"
