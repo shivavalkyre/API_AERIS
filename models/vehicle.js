@@ -67,7 +67,7 @@ module.exports = (sequelize, DataTypes) => {
   tagging:{
     type:DataTypes.STRING
   },
-  assignment{
+  assignment:{
     type: DataTypes.INTEGER
   },
   createdBy:{
