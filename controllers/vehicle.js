@@ -221,7 +221,7 @@ var ReadAll = async function(req,res){
 var ReadKMDriven = async function(req,res){
     try {
         
-        var startDate = req.startDate
+        var startDate = req.body.startDate
         var endDate = req.body.endDate
         var assetUid = req.body.assetUid
         var accountId = req.body.accountId
