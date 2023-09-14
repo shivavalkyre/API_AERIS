@@ -238,6 +238,9 @@ var ReadKMDriven = async function(req,res){
           }
 
           axios.get(url,config) .then(function (response) {
+
+            futil.logger.debug('\n' + futil.shtm() + '- [ RESPONSE BODY ] | INFO ' + util.inspect(response));
+            
             var result = {
                 "status":true,
                 "message":"success",
