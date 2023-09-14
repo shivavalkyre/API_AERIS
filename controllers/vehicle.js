@@ -228,7 +228,9 @@ var ReadKMDriven = async function(req,res){
         var token = process.env.TOKEN_AERTRAK
 
         var url = process.env.URL_KM_DRIVEN + 'startDate=' + startDate + '&endDate='+ endDate + '&assetUid=' + assetUid + '&accountId=' +accountId;
-        
+        futil.logger.debug('\n' + futil.shtm() + '- [ URL ] | INFO ' + util.inspect(url));
+        futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY ] | INFO ' + util.inspect(req.body));
+
         const config = {
             headers:{
                 token : process.env.FLESPI_TOKEN
