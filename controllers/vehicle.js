@@ -220,15 +220,14 @@ var ReadAll = async function(req,res){
 
 var ReadKMDriven = async function(req,res){
     try {
-
+        
         var startDate = req.startDate
         var endDate = req.body.endDate
         var assetUid = req.body.assetUid
         var accountId = req.body.accountId
         var token = process.env.TOKEN_AERTRAK
-        var url_ori = process.env.URL_KM_DRIVEN
 
-        var url = url_ori + 'startDate=' startDate + '&endDate='+ endDate + '&assetUid=' + assetUid + '&accountId=' +accountId;
+        var url = process.env.URL_KM_DRIVEN + 'startDate=' + startDate + '&endDate='+ endDate + '&assetUid=' + assetUid + '&accountId=' +accountId;
         
         const config = {
             headers:{
