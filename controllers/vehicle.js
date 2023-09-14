@@ -221,7 +221,7 @@ var ReadAll = async function(req,res){
 var ReadOdometer = async function(req,res){
     try {    
 
-        var vehicleid = parseInt(req.headers.vehicleid)
+        var vehicleid = req.headers.vehicleid
         
         futil.logger.debug('\n' + futil.shtm() + '- [ REQ PARAMS ] | INFO ' + util.inspect(req.headers));
         // futil.logger.debug('\n' + futil.shtm() + '- [ REQ PARAMS  page] | INFO ' + util.inspect(req.headers.page));
