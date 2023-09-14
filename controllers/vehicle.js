@@ -218,6 +218,70 @@ var ReadAll = async function(req,res){
 
 }
 
+var ReadOdometer = async function(req,res){
+    try {    
+
+        var vehicleid = parseInt(req.headers.vehicleid)
+        
+        futil.logger.debug('\n' + futil.shtm() + '- [ REQ PARAMS ] | INFO ' + util.inspect(req.headers));
+        // futil.logger.debug('\n' + futil.shtm() + '- [ REQ PARAMS  page] | INFO ' + util.inspect(req.headers.page));
+        // futil.logger.debug('\n' + futil.shtm() + '- [ REQ PARAMS  rows] | INFO ' + util.inspect(req.headers.rows));
+        // futil.logger.debug('\n' + futil.shtm() + '- [ REQ PARAMS  offset] | INFO ' + util.inspect(req.headers.offset));
+        futil.logger.debug('\n' + futil.shtm() + '- [ REQ PARAMS  createdby] | INFO ' + util.inspect(req.headers.createdby));
+
+        const count = await Vehicle.count({
+            where: {
+                vehicleid: vehicleid
+            }
+        });
+
+        futil.logger.debug('\n' + futil.shtm() + '- [ RESULT COUNT ] | QUERING ' + util.inspect(count));
+        
+        // var limit = parseInt(req.headers.rows)
+        // var offset = parseInt(req.headers.offset)
+        // var page = parseInt(req.headers.page)
+
+        var resp = await Vehicle.findAll({ raw:true,
+            where: {
+                vehicleid: vehicleid
+            },
+            order: [
+                ['id', 'ASC'],
+                ]
+            });
+
+            futil.logger.debug('\n' + futil.shtm() + '- [ RESULT VEHICLE ALL] | QUERING ' + util.inspect(resp));
+            // var rows_data = []
+            // rows_data.push(result)
+            var j=1
+            // if (offset == 0 ){
+            //     j=1
+            // }else{
+            //     j= (offset * (page-1))+1
+            // }
+
+            for (i=0;i<=resp.length-1;i++){
+                resp[i].no = j
+                j++
+            }
+
+            var response = {"total":count,"rows":resp}   
+            futil.logger.debug('\n' + futil.shtm() + '- [ RESULT RESPONSE] | QUERING ' + util.inspect(response));  
+            result.code = 200
+            result.status ="success"
+            result.data = response
+            res.send(result);
+
+    } catch (err){
+
+        futil.logger.debug('\n' + futil.shtm() + '- [ ERROR ] | QUERING ' + util.inspect(err));
+        result.code = 400
+        result.status ="failed"
+        result.data = "Read data failed"
+        res.send(result);
+    }
+}
+
 var ReadKMDriven = async function(req,res){
     try {
         
@@ -317,6 +381,7 @@ module.exports = {
     ReadAll,
     ReadAllData,
     ReadKMDriven,
+    ReadOdometer,
     Update,
     Delete
 }
