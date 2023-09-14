@@ -244,7 +244,7 @@ var ReadKMDriven = async function(req,res){
             var result = {
                 "status":true,
                 "message":"success",
-                "data": response.data.data
+                "data": response.data
               }
               res.setHeader("Content-Type", "application/json");
               res.writeHead(200);
