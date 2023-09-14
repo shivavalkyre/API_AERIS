@@ -70,6 +70,9 @@ module.exports = (sequelize, DataTypes) => {
   assignment:{
     type: DataTypes.INTEGER
   },
+  init_odometer:{
+      type: DataTypes.INTEGER
+  },
   createdBy:{
     type: DataTypes.INTEGER
   }
