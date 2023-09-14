@@ -1,8 +1,10 @@
 const db = require("../models");
 const Vehicle = db.vehicle
-
+require('dotenv').config();
 var util = require('util');
 var futil = require('../config/utility.js');
+var axios = require('axios')
+
 var result = {
     "code":"",
     "status":""
@@ -216,6 +218,54 @@ var ReadAll = async function(req,res){
 
 }
 
+var ReadKMDriven = async function(req,res){
+    try {
+        
+        var startDate = req.startDate
+        var endDate = req.body.endDate
+        var assetUid = req.body.assetUid
+        var accountId = req.body.accountId
+        var token = process.env.TOKEN_AERTRAK
+
+        var url = process.env.URL_KM_DRIVEN + 'startDate=' startDate + '&endDate='+ endDate + '&assetUid=' + assetUid + '&accountId=' +accountId;
+        
+        const config = {
+            headers:{
+                token : process.env.FLESPI_TOKEN
+            }
+          }
+
+          axios.get(url,config) .then(function (response) {
+            var result = {
+                "status":true,
+                "message":"success",
+                "data": response.data.result
+              }
+              res.setHeader("Content-Type", "application/json");
+              res.writeHead(200);
+              res.end(JSON.stringify(result));
+          })
+          .catch(function (err) {
+            var result = {  
+    
+                "status":false,
+                "message": err
+            }
+            res.setHeader("Content-Type", "application/json");
+            res.writeHead(400);
+            res.end(JSON.stringify(result,null,3));
+          })
+
+
+    }catch (err) {
+        futil.logger.debug('\n' + futil.shtm() + '- [ ERROR ] | QUERING ' + util.inspect(err));
+        result.code = 400
+        result.status ="failed"
+        result.data = "Read data failed"
+        res.send(result);
+    }
+}
+
 var Update = async function (req,res){
     try {
         const vehicle = await Vehicle.update(req.body, {
@@ -261,6 +311,7 @@ module.exports = {
     Read,
     ReadAll,
     ReadAllData,
+    ReadKMDriven,
     Update,
     Delete
 }

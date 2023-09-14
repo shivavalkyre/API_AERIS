@@ -84,6 +84,14 @@ router.get('/api/patern/vehicles/all',Auth.authAccessToken,function (req, res){
     Vehicle.ReadAll(req,res)
 })
 
+router.get('/api/patern/vehicle/kmdriven',Auth.authAccessToken,function (req, res){
+    futil.logger.debug('\n' + futil.shtm() + '- [ REQ HEADERS ] | INFO ' + util.inspect(req.headers));
+    futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY ] | INFO ' + util.inspect(req.body));
+    Vehicle.ReadKMDriven(req,res)
+})
+
+
+
 router.put('/api/patern/vehicles/:id',Auth.authAccessToken,function (req, res){
     futil.logger.debug('\n' + futil.shtm() + '- [ REQ HEADERS ] | INFO ' + util.inspect(req.headers));
     futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY ] | INFO ' + util.inspect(req.body));
