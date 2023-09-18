@@ -311,18 +311,9 @@ var ReadKMDriven = async function(req,res){
                 "message":"success",
                 "data": response.data
               }
-              
-            //   res.setHeader("Content-Type", "application/json");
-            //   res.writeHead(200);
-            //   res.end(JSON.stringify(result));
-
-            var response = {"total":1,"rows": response.data}
-            result.code = 200
-            result.status ="success"
-            result.data = response
-            res.send(result);
-
-
+              res.setHeader("Content-Type", "application/json");
+              res.writeHead(200);
+              res.end(JSON.stringify(result));
           })
           .catch(function (err) {
             var result = {  
