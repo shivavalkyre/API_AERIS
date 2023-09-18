@@ -42,7 +42,7 @@ var Login = async function(req,res){
     
             const token = jwt.sign({ username }, jwtKey, {
                 algorithm: "HS256",
-                expiresIn: jwtExpirySeconds,
+                // expiresIn: jwtExpirySeconds,
             })
     
             // console.log("token:", token)
