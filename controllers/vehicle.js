@@ -235,7 +235,7 @@ var ReadOdometer = async function(req,res){
             }
         });
 
-        futil.logger.debug('\n' + futil.shtm() + '- [ RESULT COUNT ] | QUERING ' + util.inspect(count));
+        futil.logger.debug('\n' + futil.shtm() + '- [ RESULT COUNT VEHICLE ] | QUERING ' + util.inspect(count));
         
         // var limit = parseInt(req.headers.rows)
         // var offset = parseInt(req.headers.offset)
