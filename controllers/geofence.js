@@ -37,7 +37,7 @@ var Create = async function(req,res){
                 "coordinates": {
                   "type": coordinate_type,
                   "geometry": {
-                    "type": geomerty_type,
+                    "type": "Point",
                     "coordinates": [
                       coordinates
                     ]
