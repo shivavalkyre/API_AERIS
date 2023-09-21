@@ -134,6 +134,12 @@ router.delete('/api/patern/vehicles/:id',Auth.authAccessToken,function (req, res
 //     Vehicle_User.Delete(req,res)
 // })
 
+// Geofence ===========================================================
+
+router.get('/api/patern/geofence',Auth.authAccessToken,function(req,res){
+    
+})
+
 // User ===============================================================
 
 router.post('/api/patern/users',Auth.authAccessToken,function(req,res){
