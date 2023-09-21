@@ -21,7 +21,7 @@ var Create = async function(req,res){
         var geomerty_type =req.body.geomerty_type
         var radius = req.body.radius
         var customerId = req.body.customerId
-        var coordinates = []
+        var coordinates = req.body.coordinates
 
         const config = {
             headers:{
@@ -39,9 +39,7 @@ var Create = async function(req,res){
             "geometry": {
               "type": geomerty_type,
               "coordinates": [
-                [
-                  0
-                ]
+                coordinates
               ]
             },
             "properties": {
