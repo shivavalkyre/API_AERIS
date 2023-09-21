@@ -19,7 +19,6 @@ var Create = async function(req,res){
         var type = "PLACE"
         var coordinate_type = req.body.coordinate_type
         var geomerty_type = req.body.geomerty_type
-        var radius = req.body.radius
         var customerId = req.body.customerId
         var coordinates = req.body.coordinates
 
@@ -30,6 +29,9 @@ var Create = async function(req,res){
           }
 
         if (mode == 'circle'){
+
+            var radius = req.body.radius
+            
             var postData =   {
                 "placeId": placeId,
                 "type": "PLACE",
@@ -46,6 +48,20 @@ var Create = async function(req,res){
                       "unit": "meter",
                       "value": radius
                     }
+                  }
+                },
+                "customerId": customerId
+              }
+        }else{
+            var postData =  {
+                "placeId": placeId,
+                "type": "PLACE",
+                "address": address,
+                "coordinates": {
+                    "type": coordinate_type,
+                  "geometry": {
+                    "type": "Polygon",
+                    "coordinates": coordinates
                   }
                 },
                 "customerId": customerId
@@ -185,6 +201,20 @@ var Update = async function(req,res){
                       "unit": "meter",
                       "value": radius
                     }
+                  }
+                },
+                "customerId": customerId
+              }
+        }else{
+            var postData =  {
+                "placeId": placeId,
+                "type": "PLACE",
+                "address": address,
+                "coordinates": {
+                    "type": coordinate_type,
+                  "geometry": {
+                    "type": "Polygon",
+                    "coordinates": coordinates
                   }
                 },
                 "customerId": customerId
