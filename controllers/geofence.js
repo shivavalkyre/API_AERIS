@@ -23,6 +23,12 @@ var Create = async function(req,res){
         var customerId = req.body.customerId
         var coordinates = []
 
+        const config = {
+            headers:{
+                token : process.env.TOKEN_AERTRAK
+            }
+          }
+
 
         var postData =   {
           "placeId": placeId,
