@@ -38,9 +38,8 @@ var Create = async function(req,res){
                   "type": coordinate_type,
                   "geometry": {
                     "type": "Point",
-                    "coordinates": [
+                    "coordinates": 
                       coordinates
-                    ]
                   },
                   "properties": {
                     "radius": {
