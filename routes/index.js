@@ -145,6 +145,15 @@ router.get('/api/patern/geofence',Auth.authAccessToken,function(req,res){
     Geofence.Read(req,res)
 })
 
+router.put('/api/patern/geofence',Auth.authAccessToken,function(req,res){
+    Geofence.Update(req,res)
+})
+
+router.delete('/api/patern/geofence',Auth.authAccessToken,function(req,res){
+    Geofence.Delete(req,res)
+})
+
+
 
 
 // User ===============================================================
