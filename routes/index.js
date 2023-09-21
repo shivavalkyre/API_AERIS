@@ -141,6 +141,10 @@ router.get('/api/patern/geofence',Auth.authAccessToken,function(req,res){
     Geofence.Read(req,res)
 })
 
+router.post('/api/patern/geofence',Auth.authAccessToken,function(req,res){
+    Geofence.Create(req,res)
+})
+
 // User ===============================================================
 
 router.post('/api/patern/users',Auth.authAccessToken,function(req,res){
