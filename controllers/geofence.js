@@ -13,7 +13,7 @@ var Create = async function(req,res){
 
         var token = process.env.TOKEN_AERTRAK
         var url = process.env.URL_GEOFENCE;
-
+        var mode = req.body.mode
         var placeId = req.body.placeId
         var address = req.body.address
         var type = "PLACE"
@@ -29,28 +29,30 @@ var Create = async function(req,res){
             }
           }
 
-
-        var postData =   {
-          "placeId": placeId,
-          "type": "PLACE",
-          "address": address,
-          "coordinates": {
-            "type": coordinate_type,
-            "geometry": {
-              "type": geomerty_type,
-              "coordinates": [
-                coordinates
-              ]
-            },
-            "properties": {
-              "radius": {
-                "unit": "meter",
-                "value": radius
+        if (mode == 'circle'){
+            var postData =   {
+                "placeId": placeId,
+                "type": "PLACE",
+                "address": address,
+                "coordinates": {
+                  "type": coordinate_type,
+                  "geometry": {
+                    "type": geomerty_type,
+                    "coordinates": [
+                      coordinates
+                    ]
+                  },
+                  "properties": {
+                    "radius": {
+                      "unit": "meter",
+                      "value": radius
+                    }
+                  }
+                },
+                "customerId": customerId
               }
-            }
-          },
-          "customerId": customerId
         }
+       
 
         futil.logger.debug('\n' + futil.shtm() + '- [ URL ] | INFO ' + util.inspect(url));
         futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY ] | INFO ' + util.inspect(req.body));
