@@ -252,7 +252,16 @@ var Delete = async function(req,res){
           }
 
         axios.delete(url,config) .then(function (response) {
+            futil.logger.debug('\n' + futil.shtm() + '- [ RESPONSE BODY ] | INFO ' + util.inspect(response.data));
 
+            var result = {
+                "status":true,
+                "message":"success",
+                "data": response.data
+              }
+              res.setHeader("Content-Type", "application/json");
+              res.writeHead(200);
+              res.end(JSON.stringify(result));
 
         }).catch(function (err) {
             var result = {  
