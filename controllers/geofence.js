@@ -59,6 +59,6 @@ var Read = async function(req,res){
 }
 
 module.exports = {
-    Create,
+    // Create,
     Read,
 }

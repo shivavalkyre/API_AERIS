@@ -6,6 +6,7 @@ var User = require('../controllers/user.js')
 var Task = require('../controllers/task.js')
 var Vehicle = require('../controllers/vehicle.js')
 var Vehicle_User = require('../controllers/vehicle_user.js')
+var Geofence = require('../controllers/geofence.js')
 var Assets = require('../controllers/assets.js')
 var Devices = require('../controllers/device.js')
 var Auth = require('../controllers/auth.js')
@@ -137,7 +138,7 @@ router.delete('/api/patern/vehicles/:id',Auth.authAccessToken,function (req, res
 // Geofence ===========================================================
 
 router.get('/api/patern/geofence',Auth.authAccessToken,function(req,res){
-    
+    Geofence.Read(req,res)
 })
 
 // User ===============================================================
