@@ -73,9 +73,9 @@ var Create = async function(req,res){
             var param_coordinate = JSON.stringify({"type": coordinate_type,"geometry":{"type":"Polygon","coordinates": coordinates}})
 
             var postData= {
-              "id": "Test2",
-              "name": "TestPolygonPlace",
-              "address":"Taman Udayana V No.26",
+              "id": placeId,
+              "name": placeId,
+              "address": address,
               "type": "PLACE",
               "coordinates": param_coordinate,
               "customerId": customerId
