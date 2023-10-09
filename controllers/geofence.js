@@ -67,12 +67,13 @@ var Create = async function(req,res){
             //     },
             //     "customerId": customerId
             //   }
-            
+
             var url = process.env.URL_GEOFENCE_POLYGON;
 
             var postData= {
               "id": "Test2",
               "name": "TestPolygonPlace",
+              "address":"TAman Udayana V No.26"
               "type": "PLACE",
               "coordinates":
                   {
