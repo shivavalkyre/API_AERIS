@@ -77,7 +77,8 @@ var Create = async function(req,res){
               "name": "TestPolygonPlace",
               "address":"Taman Udayana V No.26",
               "type": "PLACE",
-              "coordinates": param_coordinate
+              "coordinates": param_coordinate,
+              "customerId": customerId
               }   
         }
        
