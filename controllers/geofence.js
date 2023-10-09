@@ -73,7 +73,7 @@ var Create = async function(req,res){
             var postData= {
               "id": "Test2",
               "name": "TestPolygonPlace",
-              "address":"TAman Udayana V No.26"
+              "address":"Taman Udayana V No.26",
               "type": "PLACE",
               "coordinates":
                   {
