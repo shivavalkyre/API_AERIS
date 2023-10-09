@@ -68,7 +68,7 @@ var Create = async function(req,res){
             //     "customerId": customerId
             //   }
 
-            var postDta= {
+            var postData= {
               "id": "Test2",
               "name": "TestPolygonPlace",
               "type": "PLACE",
