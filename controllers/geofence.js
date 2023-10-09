@@ -134,7 +134,7 @@ var Create = async function(req,res){
         futil.logger.debug('\n' + futil.shtm() + '- [ ERROR ] | QUERING ' + util.inspect(err));
         result.code = 400
         result.status ="failed"
-        result.data = "Read data failed"
+        result.data = err
         res.send(result);
     }
 }
