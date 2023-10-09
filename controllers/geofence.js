@@ -77,7 +77,7 @@ var Create = async function(req,res){
                     "type": coordinate_type,
                     "geometry":{
                       "type":"Polygon",
-                      "coordinates": coordinates
+                      "coordinates": JSON.stringify(coordinates)
                     }
                   }
                 }   
