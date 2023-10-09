@@ -21,7 +21,7 @@ var Create = async function(req,res){
        
         var geomerty_type = req.body.geomerty_type
         var customerId = req.body.customerId
-        var coordinates = req.body.coordinates
+        var coordinates = JSON.parse(req.body.coordinates)
 
         futil.logger.debug('\n' + futil.shtm() + '- [ COORDINATES ] | INFO ' + util.inspect(coordinates));
 
