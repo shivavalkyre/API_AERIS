@@ -12,7 +12,7 @@ var Create = async function(req,res){
     try {
 
         var token = process.env.TOKEN_AERTRAK
-        var url = process.env.URL_GEOFENCE;
+        
         var mode = req.body.mode
         var placeId = req.body.placeId
         var address = req.body.address
@@ -30,7 +30,7 @@ var Create = async function(req,res){
           }
 
         if (mode == 'circle'){
-
+            var url = process.env.URL_GEOFENCE;
             var radius = req.body.radius
 
             var postData =   {
@@ -67,6 +67,8 @@ var Create = async function(req,res){
             //     },
             //     "customerId": customerId
             //   }
+            
+            var url = process.env.URL_GEOFENCE_POLYGON;
 
             var postData= {
               "id": "Test2",
