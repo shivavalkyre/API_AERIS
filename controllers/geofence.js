@@ -34,7 +34,7 @@ var Create = async function(req,res){
 
         if (mode == 'circle'){
             var url = process.env.URL_GEOFENCE;
-            var formatted_coordinate = [coordinates[1],coordinates[0]]
+            var formatted_coordinate = [[coordinates[1],coordinates[0]]]
 
             futil.logger.debug('\n' + futil.shtm() + '- [ FORMATTED COORDINATE ] | INFO ' + util.inspect(formatted_coordinate));
             var param_coordinate = JSON.stringify(formatted_coordinate)
