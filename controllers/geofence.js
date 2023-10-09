@@ -79,8 +79,11 @@ var Create = async function(req,res){
             var url = process.env.URL_GEOFENCE_POLYGON;
             var formatted_coordinate = []
             var temp_coordinate 
+            futil.logger.debug('\n' + futil.shtm() + '- [ COORDINATE LENGTH ] | INFO ' + util.inspect( coordinates.length));
+
             for (i=0;i<= coordinates.length-1;i++){
               temp_coordinate = [coordinates[i].lng,coordinates[i].lat]
+              futil.logger.debug('\n' + futil.shtm() + '- [ TEMP COORDINATE ] | INFO ' + util.inspect(temp_coordinate));
               formatted_coordinate.push(temp_coordinate)
             }
 
