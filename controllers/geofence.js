@@ -69,8 +69,15 @@ var Create = async function(req,res){
             //   }
 
             var url = process.env.URL_GEOFENCE_POLYGON;
+            var formatted_coordinate = []
+            var temp_coordinate 
+            for (i=0;i<= coordinates.length-1;i++){
+              temp_coordinate = [coordinates[i].lng,coordinates[i].lat]
+              formatted_coordinate.push(temp_coordinate)
+            }
 
-            var param_coordinate = JSON.stringify({"type": coordinate_type,"geometry":{"type":"Polygon","coordinates": coordinates}})
+            futil.logger.debug('\n' + futil.shtm() + '- [ FORMATTED COORDINATE ] | INFO ' + util.inspect(formatted_coordinate));
+            var param_coordinate = JSON.stringify({"type": coordinate_type,"geometry":{"type":"Polygon","coordinates": [formatted_coordinate]}})
 
             var postData= {
               "id": placeId,
