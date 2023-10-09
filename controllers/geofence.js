@@ -70,7 +70,7 @@ var Create = async function(req,res){
 
             var url = process.env.URL_GEOFENCE_POLYGON;
 
-            var param_coordinate = JSON.stringify({"type": coordinate_type,"geometry":{"type":"Polygon","coordinates": JSON.stringify(coordinates)}})
+            var param_coordinate = JSON.stringify({"type": coordinate_type,"geometry":{"type":"Polygon","coordinates": coordinates}})
 
             var postData= {
               "id": "Test2",
