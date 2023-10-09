@@ -54,25 +54,38 @@ var Create = async function(req,res){
                 "customerId": customerId
               }
         }else{
-            var postData =  {
-                "placeId": placeId,
-                "type": "PLACE",
-                "address": address,
-                "coordinates": {
+            // var postData =  {
+            //     "placeId": placeId,
+            //     "type": "PLACE",
+            //     "address": address,
+            //     "coordinates": {
+            //         "type": coordinate_type,
+            //       "geometry": {
+            //         "type": "Polygon",
+            //         "coordinates": coordinates
+            //       }
+            //     },
+            //     "customerId": customerId
+            //   }
+
+            var postDta= {
+              "id": "Test2",
+              "name": "TestPolygonPlace",
+              "type": "PLACE",
+              "coordinates":
+                  {
                     "type": coordinate_type,
-                  "geometry": {
-                    "type": "Polygon",
-                    "coordinates": coordinates
+                    "geometry":{
+                      "type":"Polygon",
+                      "coordinates": coordinates
+                    }
                   }
-                },
-                "customerId": customerId
-              }
+                }   
         }
        
 
         futil.logger.debug('\n' + futil.shtm() + '- [ URL ] | INFO ' + util.inspect(url));
         futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY ] | INFO ' + util.inspect(req.body));
-
         futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY SENT ] | INFO ' + util.inspect(postData));
       
 
