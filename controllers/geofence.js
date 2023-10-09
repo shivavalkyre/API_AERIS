@@ -23,6 +23,8 @@ var Create = async function(req,res){
         var customerId = req.body.customerId
         var coordinates = req.body.coordinates
 
+        futil.logger.debug('\n' + futil.shtm() + '- [ COORDINATES ] | INFO ' + util.inspect(coordinates));
+
         const config = {
             headers:{
                 token : process.env.TOKEN_AERTRAK
