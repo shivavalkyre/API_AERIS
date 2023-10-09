@@ -23,6 +23,7 @@ var Create = async function(req,res){
         var customerId = req.body.customerId
         var coordinates = JSON.parse(req.body.coordinates)
 
+        futil.logger.debug('\n' + futil.shtm() + '- [ MODE ] | INFO ' + util.inspect(mode));
         futil.logger.debug('\n' + futil.shtm() + '- [ COORDINATES ] | INFO ' + util.inspect(coordinates));
 
         const config = {
