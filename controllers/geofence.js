@@ -243,25 +243,24 @@ var Update = async function(req,res){
                 "customerId": customerId
               }
         }else{
-            var postData =  {
-                "placeId": placeId,
-                "type": "PLACE",
-                "address": address,
-                "coordinates": {
-                    "type": coordinate_type,
-                  "geometry": {
-                    "type": "Polygon",
-                    "coordinates": coordinates
-                  }
-                },
-                "properties": {
-                    "radius": {
-                      "unit": "meter",
-                      "value": radius
-                    }
-                  },
-                "customerId": customerId
-              }
+
+          for (i=0;i<= coordinates.length-1;i++){
+            temp_coordinate = [coordinates[i].lng,coordinates[i].lat]
+            futil.logger.debug('\n' + futil.shtm() + '- [ TEMP COORDINATE ] | INFO ' + util.inspect(temp_coordinate));
+            formatted_coordinate.push(temp_coordinate)
+          }
+
+          futil.logger.debug('\n' + futil.shtm() + '- [ FORMATTED COORDINATE ] | INFO ' + util.inspect(formatted_coordinate));
+          var param_coordinate = JSON.stringify({"type": coordinate_type,"geometry":{"type":"Polygon","coordinates": [formatted_coordinate]}})
+
+          var postData= {
+            "id": placeId,
+            "name": placeId,
+            "address": address,
+            "type": "PLACE",
+            "coordinates": param_coordinate,
+            "customerId": customerId
+            }   
         }
        
 
