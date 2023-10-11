@@ -216,8 +216,14 @@ var Update = async function(req,res){
           }
 
         if (mode == 'circle'){
+
+          var formatted_coordinate = [[coordinates[1],coordinates[0]]]
+          futil.logger.debug('\n' + futil.shtm() + '- [ FORMATTED COORDINATE ] | INFO ' + util.inspect(formatted_coordinate));
+          var param_coordinate = JSON.stringify(formatted_coordinate)
+
             var postData =   {
                 "placeId": placeId,
+                "name":placeId,
                 "type": "PLACE",
                 "address": address,
                 "coordinates": {
@@ -225,7 +231,7 @@ var Update = async function(req,res){
                   "geometry": {
                     "type": "Point",
                     "coordinates": 
-                      coordinates
+                      formatted_coordinate
                   },
                   "properties": {
                     "radius": {
@@ -266,7 +272,7 @@ var Update = async function(req,res){
 
  
 
-          axios.put(url,postData,config) .then(function (response) {
+            axios.put(url,postData,config) .then(function (response) {
 
             futil.logger.debug('\n' + futil.shtm() + '- [ RESPONSE BODY ] | INFO ' + util.inspect(response.data));
 
