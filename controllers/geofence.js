@@ -266,8 +266,7 @@ var Update = async function(req,res){
             "name": placeId,
             "address": address,
             "type": "PLACE",
-            "coordinates": param_coordinate,
-            "customerId": customerId
+            "coordinates": param_coordinate
             }   
         }
        
