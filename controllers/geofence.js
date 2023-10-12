@@ -215,7 +215,7 @@ var Update = async function(req,res){
             }
           }
 
-        futil.logger.debug('\n' + futil.shtm() + '- [ MODE REQUEST UPDATE ] | INFO ' + util.inspect(formatted_coordinate));
+        futil.logger.debug('\n' + futil.shtm() + '- [ MODE REQUEST UPDATE ] | INFO ' + util.inspect(mode));
 
         if (mode == 'circle'){
 
