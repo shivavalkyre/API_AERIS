@@ -206,7 +206,7 @@ var Update = async function(req,res){
         var coordinate_type = req.body.coordinate_type
         var geomerty_type = req.body.geomerty_type
         var radius = req.body.radius
-        var customerId = req.body.customerId
+        var customerId = String(req.body.customerId)
         var coordinates = req.body.coordinates
 
         const config = {
