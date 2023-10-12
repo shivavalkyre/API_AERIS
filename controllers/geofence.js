@@ -293,6 +293,9 @@ var Update = async function(req,res){
               res.end(JSON.stringify(result));
           })
           .catch(function (err) {
+
+            futil.logger.debug('\n' + futil.shtm() + '- [ RESPONSE BODY ERROR ] | INFO ' + util.inspect(err));
+
             var result = {  
     
                 "status":false,
