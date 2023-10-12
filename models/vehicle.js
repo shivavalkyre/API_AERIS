@@ -61,6 +61,9 @@ module.exports = (sequelize, DataTypes) => {
   vin: {
     type: DataTypes.STRING
   },
+  license_plate:{
+    type: DataTypes.STRING
+  },
   deviceId: {
     type: DataTypes.STRING
   },
