@@ -264,7 +264,7 @@ var Update = async function(req,res){
         }
        
 
-        futil.logger.debug('\n' + futil.shtm() + '- [ URL ] | INFO ' + util.inspect(url));
+        futil.logger.debug('\n' + futil.shtm() + '- [ URL UPDATE GEOFENCE ] | INFO ' + util.inspect(url));
         futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY ] | INFO ' + util.inspect(req.body));
         futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY SENT ] | INFO ' + util.inspect(postData));
       
