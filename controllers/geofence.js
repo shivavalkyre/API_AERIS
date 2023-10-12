@@ -246,6 +246,9 @@ var Update = async function(req,res){
               }
         }else if (mode == 'polygon'){
 
+          futil.logger.debug('\n' + futil.shtm() + '- [ ORI COORDINATE LENGTH  POLYGON] | INFO ' + util.inspect(coordinates.length));
+          futil.logger.debug('\n' + futil.shtm() + '- [ ORI COORDINATE POLYGON] | INFO ' + util.inspect(coordinates));
+
           for (i=0;i<= coordinates.length-1;i++){
             temp_coordinate = [coordinates[i].lng,coordinates[i].lat]
             futil.logger.debug('\n' + futil.shtm() + '- [ TEMP COORDINATE POLYGON] | INFO ' + util.inspect(temp_coordinate));
