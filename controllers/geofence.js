@@ -215,6 +215,8 @@ var Update = async function(req,res){
             }
           }
 
+        futil.logger.debug('\n' + futil.shtm() + '- [ MODE REQUEST UPDATE ] | INFO ' + util.inspect(formatted_coordinate));
+
         if (mode == 'circle'){
 
           var formatted_coordinate = [[coordinates[1],coordinates[0]]]
@@ -246,7 +248,7 @@ var Update = async function(req,res){
 
           for (i=0;i<= coordinates.length-1;i++){
             temp_coordinate = [coordinates[i].lng,coordinates[i].lat]
-            futil.logger.debug('\n' + futil.shtm() + '- [ TEMP COORDINATE ] | INFO ' + util.inspect(temp_coordinate));
+            futil.logger.debug('\n' + futil.shtm() + '- [ TEMP COORDINATE POLYGON] | INFO ' + util.inspect(temp_coordinate));
             formatted_coordinate.push(temp_coordinate)
           }
 
