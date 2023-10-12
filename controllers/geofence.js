@@ -219,6 +219,8 @@ var Update = async function(req,res){
         if (mode == 'circle'){
 
           var url = process.env.URL_GEOFENCE + '/' + placeUid ;
+          futil.logger.debug('\n' + futil.shtm() + '- [ URL UPDATE GEOFENCE CIRCLE ] | INFO ' + util.inspect(url));
+          
           var formatted_coordinate = [[coordinates[1],coordinates[0]]]
           futil.logger.debug('\n' + futil.shtm() + '- [ FORMATTED COORDINATE ] | INFO ' + util.inspect(formatted_coordinate));
           var param_coordinate = JSON.stringify(formatted_coordinate)
@@ -249,7 +251,8 @@ var Update = async function(req,res){
           futil.logger.debug('\n' + futil.shtm() + '- [ ORI COORDINATE LENGTH  POLYGON] | INFO ' + util.inspect(coordinates.length));
           futil.logger.debug('\n' + futil.shtm() + '- [ ORI COORDINATE POLYGON] | INFO ' + util.inspect(coordinates));
           
-          var url = process.env.URL_GEOFENCE_POLYGON +'/' + placeUid
+          var url = process.env.URL_GEOFENCE_POLYGON + '/' + placeUid;
+          futil.logger.debug('\n' + futil.shtm() + '- [ URL UPDATE GEOFENCE POLYGON ] | INFO ' + util.inspect(url));
           var formatted_coordinate = []
           var temp_coordinate 
 
