@@ -198,7 +198,6 @@ var Update = async function(req,res){
 
         var token = process.env.TOKEN_AERTRAK
         var placeUid = req.body.placeUid
-        var url = process.env.URL_GEOFENCE + '/' + placeUid ;
         var mode = req.body.mode
         var placeId = req.body.placeId
         var address = req.body.address
@@ -219,6 +218,7 @@ var Update = async function(req,res){
 
         if (mode == 'circle'){
 
+          var url = process.env.URL_GEOFENCE + '/' + placeUid ;
           var formatted_coordinate = [[coordinates[1],coordinates[0]]]
           futil.logger.debug('\n' + futil.shtm() + '- [ FORMATTED COORDINATE ] | INFO ' + util.inspect(formatted_coordinate));
           var param_coordinate = JSON.stringify(formatted_coordinate)
@@ -248,7 +248,8 @@ var Update = async function(req,res){
 
           futil.logger.debug('\n' + futil.shtm() + '- [ ORI COORDINATE LENGTH  POLYGON] | INFO ' + util.inspect(coordinates.length));
           futil.logger.debug('\n' + futil.shtm() + '- [ ORI COORDINATE POLYGON] | INFO ' + util.inspect(coordinates));
-
+          
+          var url = process.env.URL_GEOFENCE_POLYGON +'/' + placeUid
           var formatted_coordinate = []
           var temp_coordinate 
 
