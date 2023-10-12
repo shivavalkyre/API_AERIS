@@ -251,7 +251,7 @@ var Update = async function(req,res){
 
           var formatted_coordinate = []
           var temp_coordinate 
-          
+
           for (i=0;i<= coordinates.length-1;i++){
             temp_coordinate = [coordinates[i].lng,coordinates[i].lat]
             futil.logger.debug('\n' + futil.shtm() + '- [ TEMP COORDINATE POLYGON] | INFO ' + util.inspect(temp_coordinate));
@@ -281,7 +281,7 @@ var Update = async function(req,res){
 
             axios.put(url,postData,config) .then(function (response) {
 
-            futil.logger.debug('\n' + futil.shtm() + '- [ RESPONSE BODY ] | INFO ' + util.inspect(response.data));
+            futil.logger.debug('\n' + futil.shtm() + '- [ RESPONSE BODY UPDATE ] | INFO ' + util.inspect(response.data));
 
             var result = {
                 "status":true,
