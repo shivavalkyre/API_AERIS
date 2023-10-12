@@ -242,7 +242,7 @@ var Update = async function(req,res){
                 },
                 "customerId": customerId
               }
-        }else{
+        }else if (mode == 'polygon'){
 
           for (i=0;i<= coordinates.length-1;i++){
             temp_coordinate = [coordinates[i].lng,coordinates[i].lat]
