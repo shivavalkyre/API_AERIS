@@ -67,6 +67,12 @@ router.post('/api/patern/vehicles',Auth.authAccessToken,function(req,res){
     Vehicle.Create(req,res)
 })
 
+router.post('/api/patern/vehicles/generate',Auth.authAccessToken,function(req,res){
+    futil.logger.debug('\n' + futil.shtm() + '- [ REQ HEADERS ] | INFO ' + util.inspect(req.headers));
+    futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY ] | INFO ' + util.inspect(req.body));
+    Vehicle.Create(req,res)
+})
+
 router.get('/api/patern/vehicles',Auth.authAccessToken,function (req, res){
     futil.logger.debug('\n' + futil.shtm() + '- [ REQ HEADERS ] | INFO ' + util.inspect(req.headers));
     futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY ] | INFO ' + util.inspect(req.body));
@@ -107,6 +113,10 @@ router.put('/api/patern/vehicles/:id',Auth.authAccessToken,function (req, res){
 
 router.delete('/api/patern/vehicles/:id',Auth.authAccessToken,function (req, res){
     Vehicle.Delete(req,res)
+})
+
+router.delete('/api/patern/vehicles',Auth.authAccessToken,function (req, res){
+    Vehicle.DeleteAll(req,res)
 })
 
 

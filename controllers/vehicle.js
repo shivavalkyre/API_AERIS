@@ -28,6 +28,7 @@ var Create = async function(req,res){
 }
 
 
+
 var Read = async function(req,res){
     try {
         
@@ -376,6 +377,25 @@ var Delete = async function (req,res){
     }
 }
 
+var DeleteAll = async function (req,res){
+    try {
+        await Vehicle.destroy({
+            where: {},
+            truncate: true
+        });
+        result.code = 200
+        result.status ="success"
+        result.data = "Delete data success"
+        res.send(result);
+    } catch (err) {
+        futil.logger.debug('\n' + futil.shtm() + '- [ ERROR ] | QUERING ' + util.inspect(err));
+        result.code = 400
+        result.status ="failed"
+        result.data = "Delete data failed"
+        res.send(result);
+    }
+}
+
 module.exports = {
     Create,
     Read,
@@ -384,5 +404,6 @@ module.exports = {
     ReadKMDriven,
     ReadOdometer,
     Update,
-    Delete
+    Delete,
+    DeleteAll
 }
