@@ -67,6 +67,9 @@ module.exports = (sequelize, DataTypes) => {
   deviceId: {
     type: DataTypes.STRING
   },
+  simId: {
+    type: DataTypes.STRING
+  },
   tagging:{
     type:DataTypes.STRING
   },
