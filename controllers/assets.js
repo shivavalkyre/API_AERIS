@@ -6,9 +6,9 @@ const {Client} = require("@googlemaps/google-maps-services-js");
 require('dotenv').config();
 
 var AssetByID = async function(req,res){
-  
+
   var access_token = process.env.TOKEN_AERTRAK
-  var url_assets = process.env.URL_ASSET_AERTRACK + '/' + req.sclId
+  var url_assets = process.env.URL_ASSET_AERTRACK + '/' + req.params.sclId
 
   futil.logger.debug('\n' + futil.shtm() + '- [ ASSETS ] | INFO ' + util.inspect('ASSETS'));  
   futil.logger.debug('\n' + futil.shtm() + '- [ URL ASSETS ] | INFO ' + util.inspect(url_assets)); 

@@ -34,7 +34,7 @@ router.post('/api/patern/assets',Auth.authAccessToken,function (req, res){
     Assets.AllAssets1(req,res)
 })
 
-router.get('/api/patern/asset/:sclId',Auth.authAccessToken,function (req, res){
+router.get('/api/patern/assets/:sclId',Auth.authAccessToken,function (req, res){
     Assets.AssetByID(req,res)
 })
 
