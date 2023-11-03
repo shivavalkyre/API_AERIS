@@ -5,6 +5,72 @@ const {Client} = require("@googlemaps/google-maps-services-js");
 
 require('dotenv').config();
 
+var AssetByID = async function(req,res){
+  
+  var access_token = process.env.TOKEN_AERTRAK
+  var url_assets = process.env.URL_ASSET_AERTRACK + '/' + req.sclId
+
+  futil.logger.debug('\n' + futil.shtm() + '- [ ASSETS ] | INFO ' + util.inspect('ASSETS'));  
+  futil.logger.debug('\n' + futil.shtm() + '- [ URL ASSETS ] | INFO ' + util.inspect(url_assets)); 
+
+  const config = {
+      headers:{
+          token : access_token
+      }
+    }
+    futil.logger.debug('\n' + futil.shtm() + '- [ REQUEST HEADER] | INFO ' + util.inspect(config)); 
+
+    await axios.get(url_assets,config)
+    .then(function (response_assets) {
+       // console.log(response_assets.data)
+       futil.logger.debug('\n' + futil.shtm() + '- [ RESPONSE BODY] | INFO ' + util.inspect(response_assets.data)); 
+           var result = {
+           "status":true,
+           "message":"success",
+           "data": response_assets.data
+       }
+
+       res.setHeader("Content-Type", "application/json");
+       res.writeHead(200);
+       res.end(JSON.stringify(result));
+
+    }) 
+    .catch(function (error) {
+       if (error.response) {
+           // The request was made and the server responded with a status code
+           // that falls out of the range of 2xx
+           futil.logger.debug('\n' + futil.shtm() + '- [ ERROR RESPONSE DATA ]  ' + util.inspect(error.response.data));
+           futil.logger.debug('\n' + futil.shtm() + '- [ ERROR RESPONSE STATUS ]  ' + util.inspect(error.response.status));
+           futil.logger.debug('\n' + futil.shtm() + '- [ ERROR RESPONSE HEADER ]  ' + util.inspect(error.response.headers));
+           // console.log(error.response.data);
+           // console.log(error.response.status);
+           // console.log(error.response.headers);
+         } else if (error.request) {
+           // The request was made but no response was received
+           // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+           // http.ClientRequest in node.js
+           futil.logger.debug('\n' + futil.shtm() + '- [ ERROR REQUEST ]  ' + util.inspect(error.request));
+           // console.log(error.request);
+         } else {
+           // Something happened in setting up the request that triggered an Error
+           // console.log('Error', error.message);
+           futil.logger.debug('\n' + futil.shtm() + '- [ ERROR ]  ' + util.inspect(error.message));
+         }
+         futil.logger.debug('\n' + futil.shtm() + '- [ ERROR CONFIG]  ' + util.inspect(error.config));
+
+         var result = {  
+
+           "status":false,
+           "message": 'ERROR CONNECTION'
+       }
+       res.setHeader("Content-Type", "application/json");
+       res.writeHead(400);
+       res.end(JSON.stringify(result,null,3));
+    })
+
+  
+}
+
 var AllAssets = async function(req,res){
  
 
@@ -588,6 +654,7 @@ var StatusCount = async function(req,res){
 }
 
 module.exports = {
+    AssetByID,
     AllAssets,
     AllAssets1,
     AssetAddress,
