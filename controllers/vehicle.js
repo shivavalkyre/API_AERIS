@@ -342,8 +342,8 @@ var ReadUsage = async function(req,res){
         
         var startDate = req.body.startDate
         var endDate = req.body.endDate
-        var assetUid = req.body.assetUid
-        var accountId = req.body.accountId
+        // var assetUid = req.body.assetUid
+        // var accountId = req.body.accountId
         var token = process.env.TOKEN_AERTRAK
 
         var url = process.env.URL_VEHICLE_USAGE+ 'startDate=' + startDate + '&endDate='+ endDate + '&limit=7';
