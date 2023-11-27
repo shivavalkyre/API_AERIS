@@ -359,7 +359,7 @@ var LatestStatus = async function(req,res){
 var LatestStatus1 = async function(req,res){
     var access_token = process.env.TOKEN_AERTRAK
     var accountId = process.env.ACCOUNTID
-    var url_latest_status = process.env.URL_LATEST_STATUS_AERTRACK +'accountId='+ accountId +'&includeHierarchy =false
+    var url_latest_status = process.env.URL_LATEST_STATUS_AERTRACK +'accountId='+ accountId +'&includeHierarchy =false'
 
     futil.logger.debug('\n' + futil.shtm() + '- [ ASSETS LATEST STATUS ] | INFO ');  
     futil.logger.debug('\n' + futil.shtm() + '- [ URL ASSETS LATEST STATUS ] | INFO ' + util.inspect(url_latest_status)); 
