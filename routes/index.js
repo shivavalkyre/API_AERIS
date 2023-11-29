@@ -194,7 +194,7 @@ router.get('/api/patern/alerts',Auth.authAccessToken,function(req,res){
     Notif.Read(req,res)
 })
 
-router.get('/api/patern/alerts/agregat',Auth.authAccessToken,function(req,res){
+router.post('/api/patern/alerts/agregat',Auth.authAccessToken,function(req,res){
     Notif.Agregat(req,res)
 })
 
