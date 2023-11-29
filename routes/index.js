@@ -195,7 +195,7 @@ router.get('/api/patern/alerts',Auth.authAccessToken,function(req,res){
 })
 
 router.get('/api/patern/alerts/agregat',Auth.authAccessToken,function(req,res){
-    Notif(req,res)
+    Notif.Agregat(req,res)
 })
 
 // User ===============================================================
