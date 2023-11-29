@@ -109,6 +109,11 @@ router.post('/api/patern/vehicle/trip',Auth.authAccessToken,function (req, res){
     Vehicle.TripReport(req,res)
 })
 
+router.post('/api/patern/vehicle/segment',Auth.authAccessToken,function (req, res){
+    futil.logger.debug('\n' + futil.shtm() + '- [ REQ HEADERS VEHICLE SEGMENT ] | INFO ' + util.inspect(req.headers));
+    futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY VEHICLE SEGMENT ] | INFO ' + util.inspect(req.body));
+    Vehicle.Segment(req,res)
+})
 
 router.post('/api/patern/vehicle/odometer',Auth.authAccessToken,function (req, res){
     futil.logger.debug('\n' + futil.shtm() + '- [ REQ HEADERS VEHICLE ALL ] | INFO ' + util.inspect(req.headers));
