@@ -103,6 +103,12 @@ router.post('/api/patern/vehicle/usage',Auth.authAccessToken,function (req, res)
     Vehicle.ReadUsage(req,res)
 })
 
+router.get('/api/patern/vehicle/trip',Auth.authAccessToken,function (req, res){
+    futil.logger.debug('\n' + futil.shtm() + '- [ REQ HEADERS VEHICLE TRIP ] | INFO ' + util.inspect(req.headers));
+    futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY VEHICLE TRIP ] | INFO ' + util.inspect(req.body));
+    Vehicle.TripReport(req,res)
+})
+
 
 router.post('/api/patern/vehicle/odometer',Auth.authAccessToken,function (req, res){
     futil.logger.debug('\n' + futil.shtm() + '- [ REQ HEADERS VEHICLE ALL ] | INFO ' + util.inspect(req.headers));
