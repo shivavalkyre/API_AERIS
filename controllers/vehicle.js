@@ -400,9 +400,9 @@ var TripReport = async function(req,res){
         // var accountId = req.body.accountId
         var token = process.env.TOKEN_AERTRAK
         if (assetUid){
-            var url = process.env.URL_VEHICLE_TRIP+ 'startDate=' + startDate + '&endDate='+ endDate +'&assetUid=' + assetUid ;
+            var url = process.env.URL_KM_DRIVEN+ 'startDate=' + startDate + '&endDate='+ endDate +'&assetUid=' + assetUid ;
         }else{
-            var url = process.env.URL_VEHICLE_TRIP+ 'startDate=' + startDate + '&endDate='+ endDate ;
+            var url = process.env.URL_KM_DRIVEN+ 'startDate=' + startDate + '&endDate='+ endDate ;
         }
         
         futil.logger.debug('\n' + futil.shtm() + '- [ URL ] | INFO ' + util.inspect(url));
