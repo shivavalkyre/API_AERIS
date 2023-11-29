@@ -89,7 +89,7 @@ var Agregat =  async function(req,res){
 
         var formattedToday = yyyy + '-' + mm + '-' + dd;
 
-        var url = process.env.URL_ALERT_AGREGAT +'startDate=' + formattedToday + '&endDate=' + formattedToday;
+        var url = process.env.URL_ALERT_AGREGAT +'startDate=' + formattedToday + '&endDate=' + formattedToday + '&group=severity';
 
         futil.logger.debug('\n' + futil.shtm() + '- [ URL ] | INFO ' + util.inspect(url));
         futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY ] | INFO ' + util.inspect(req.body));
