@@ -72,7 +72,7 @@ var Read = async function(req,res){
     }
 }
 
-var Agregat =  = async function(req,res){
+var Agregat =  async function(req,res){
     try {
         
 
