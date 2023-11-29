@@ -77,19 +77,21 @@ var Agregat =  async function(req,res){
         
 
         var token = process.env.TOKEN_AERTRAK
+        var startDate = req.body.startDate
+        var endDate = req.body.endDate
 
         // current date
-        var today = new Date();
-        var yyyy = today.getFullYear();
-        let mm = today.getMonth() + 1; // Months start at 0!
-        let dd = today.getDate();
+        // var today = new Date();
+        // var yyyy = today.getFullYear();
+        // let mm = today.getMonth() + 1; // Months start at 0!
+        // let dd = today.getDate();
 
-        if (dd < 10) dd = '0' + dd;
-        if (mm < 10) mm = '0' + mm;
+        // if (dd < 10) dd = '0' + dd;
+        // if (mm < 10) mm = '0' + mm;
 
-        var formattedToday = yyyy + '-' + mm + '-' + dd;
+        // var formattedToday = yyyy + '-' + mm + '-' + dd;
 
-        var url = process.env.URL_ALERT_AGREGAT +'startDate=' + formattedToday + '&endDate=' + formattedToday + '&group=severity';
+        var url = process.env.URL_ALERT_AGREGAT +'startDate=' + startDate + '&endDate=' + endDate + '&group=severity';
 
         futil.logger.debug('\n' + futil.shtm() + '- [ URL ] | INFO ' + util.inspect(url));
         futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY ] | INFO ' + util.inspect(req.body));
