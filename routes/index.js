@@ -172,19 +172,19 @@ router.delete('/api/patern/vehicles',Auth.authAccessToken,function (req, res){
 // Geofence ===========================================================
 
 router.post('/api/patern/geofence',Auth.authAccessToken,function(req,res){
-    Geofence.Create(req,res)
+    Geofence.Create(req,res);
 })
 
 router.post('/api/patern/geofence/history',Auth.authAccessToken,function(req,res){
-    Geofence.history(req,res)
-})
+    Geofence.history(req,res);
+});
 
 
 
 
 router.get('/api/patern/geofence',Auth.authAccessToken,function(req,res){
-    Geofence.Read(req,res)
-})
+    Geofence.Read(req,res);
+});
 
 router.put('/api/patern/geofence',Auth.authAccessToken,function(req,res){
     Geofence.Update(req,res)
