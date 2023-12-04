@@ -425,7 +425,9 @@ var history_detail = async function(req,res){
   try {
     var token = process.env.TOKEN_AERTRAK
 
-    var url = process.env.URL_GEOFENCE_HISTORY_DETAILS+"startDate="+ req.body.startDate + "&endDate=" + req.body.endDate;
+    // var url = process.env.URL_GEOFENCE_HISTORY_DETAILS+"startDate="+ req.body.startDate + "&endDate=" + req.body.endDate;
+
+    var url ="https://api-aertrakasia.aeris.com/api/things/accounts/geofenceHistoryDetails?startDate=2023-11-01&endDate=2023-12-04&sclId=c0a555c6-462d-4c83-b685-fe023a5954cc"
 
     futil.logger.debug('\n' + futil.shtm() + '- [ URL ] | INFO ' + util.inspect(url));
     futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY ] | INFO ' + util.inspect(req.body));
