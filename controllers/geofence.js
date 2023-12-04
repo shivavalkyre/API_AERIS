@@ -470,6 +470,6 @@ module.exports = {
     Read,
     Update,
     Delete,
-    History,
-    HistoryDetail
+    history,
+    
 }
