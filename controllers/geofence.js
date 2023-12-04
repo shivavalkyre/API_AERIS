@@ -371,7 +371,7 @@ var Delete = async function(req,res){
 }
 
 
-var History = async function(req,res){
+var history = async function(req,res){
   try {
     var token = process.env.TOKEN_AERTRAK
 
@@ -418,7 +418,7 @@ var History = async function(req,res){
   }
 }
 
-var HistoryDetail = async function(req,res){
+var history_detail = async function(req,res){
     try {
       var token = process.env.TOKEN_AERTRAK
 
