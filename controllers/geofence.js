@@ -473,5 +473,6 @@ module.exports = {
     Update,
     Delete,
     history,
+    history_detail,
     
 }
