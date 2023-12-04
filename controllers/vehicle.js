@@ -459,12 +459,12 @@ var Segment = async function (req,res){
         var token = process.env.TOKEN_AERTRAK
 
         if (sclId){
-            var url = process.env.URL_VEHICLE_SEGMENT+ 'startDate=' + startDate + '&endDate='+ endDate +'& sclId=' +  sclId ;
+            var url = process.env.URL_VEHICLE_SEGMENT+ 'startDate=' + startDate + '&endDate='+ endDate +'&sclId=' +  sclId ;
         }else{
             var url = process.env.URL_VEHICLE_SEGMENT+ 'startDate=' + startDate + '&endDate='+ endDate ;
         }
         
-        futil.logger.debug('\n' + futil.shtm() + '- [ URL ] | INFO ' + util.inspect(url));
+        futil.logger.debug('\n' + futil.shtm() + '- [ URL SEGMENTS] | INFO ' + util.inspect(url));
         futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY ] | INFO ' + util.inspect(req.body));
 
         const config = {
