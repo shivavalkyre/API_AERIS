@@ -175,6 +175,16 @@ router.post('/api/patern/geofence',Auth.authAccessToken,function(req,res){
     Geofence.Create(req,res)
 })
 
+router.post('/api/patern/geofence/history',Auth.authAccessToken,function(req,res){
+    Geofence.History(req,res)
+})
+
+
+router.post('/api/patern/geofence/history_detail',Auth.authAccessToken,function(req,res){
+    Geofence.HistoryDetail(req,res)
+})
+
+
 router.get('/api/patern/geofence',Auth.authAccessToken,function(req,res){
     Geofence.Read(req,res)
 })
