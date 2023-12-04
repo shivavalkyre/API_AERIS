@@ -176,7 +176,7 @@ router.post('/api/patern/geofence',Auth.authAccessToken,function(req,res){
 })
 
 router.post('/api/patern/geofence/history',Auth.authAccessToken,function(req,res){
-    Geofence.History(req,res)
+    Geofence.history(req,res)
 })
 
 
