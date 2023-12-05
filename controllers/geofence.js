@@ -424,7 +424,57 @@ var History = async function(req,res){
   }
 }
 
+var HistoryDetail = async function(req,res){
+  try {
+      
+      var startDate = req.body.startDate
+      var endDate = req.body.endDate
+      var sclId = req.body.sclId
+      var token = process.env.TOKEN_AERTRAK
 
+      var url = process.env.URL_GEOFENCE_HISTORY + 'startDate=' + startDate + '&endDate=' + endDate;
+      futil.logger.debug('\n' + futil.shtm() + '- [ URL ] | INFO ' + util.inspect(url));
+      futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY ] | INFO ' + util.inspect(req.body));
+
+      const config = {
+          headers:{
+              token : token
+          }
+        }
+
+        axios.get(url,config) .then(function (response) {
+
+          futil.logger.debug('\n' + futil.shtm() + '- [ RESPONSE BODY ] | INFO ' + util.inspect(response.data));
+
+          var result = {
+              "status":true,
+              "message":"success",
+              "data": response.data
+            }
+            res.setHeader("Content-Type", "application/json");
+            res.writeHead(200);
+            res.end(JSON.stringify(result));
+        })
+        .catch(function (err) {
+          var result = {  
+  
+              "status":false,
+              "message": err
+          }
+          res.setHeader("Content-Type", "application/json");
+          res.writeHead(400);
+          res.end(JSON.stringify(result,null,3));
+        })
+
+
+  }catch (err) {
+      futil.logger.debug('\n' + futil.shtm() + '- [ ERROR ] | QUERING ' + util.inspect(err));
+      result.code = 400
+      result.status ="failed"
+      result.data = "Read data failed"
+      res.send(result);
+  }
+}
 
 
 module.exports = {
@@ -433,5 +483,5 @@ module.exports = {
     Update,
     Delete,
     History,
-    
+    HistoryDetail,
 }
