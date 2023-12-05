@@ -432,7 +432,7 @@ var HistoryDetail = async function(req,res){
       var sclId = req.body.sclId
       var token = process.env.TOKEN_AERTRAK
 
-      var url = process.env.URL_GEOFENCE_HISTORY + 'startDate=' + startDate + '&endDate=' + endDate;
+      var url = process.env.URL_GEOFENCE_HISTORY_DETAIL + 'startDate=' + startDate + '&endDate=' + endDate + '&sclId='+ sclId;
       futil.logger.debug('\n' + futil.shtm() + '- [ URL ] | INFO ' + util.inspect(url));
       futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY ] | INFO ' + util.inspect(req.body));
 
