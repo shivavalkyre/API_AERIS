@@ -45,7 +45,7 @@ var Login = async function(req,res){
                 expiresIn: jwtExpirySeconds,
             })
     
-            // console.log("token:", token)
+            console.log("token:", token)
 
             var url = process.env.URL_LOGIN_AERTRACK
             var username = process.env.AERTRACK_USERNAME
