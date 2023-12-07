@@ -202,7 +202,7 @@ router.get('/api/patern/alerts',Auth.authAccessToken,function(req,res){
     Notif.Read(req,res)
 })
 
-router.get('/api/patern/alerts/period',Auth.authAccessToken,function(req,res){
+router.post('/api/patern/alerts/period',Auth.authAccessToken,function(req,res){
     Notif.ReadPeriod(req,res)
 })
 
