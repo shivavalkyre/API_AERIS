@@ -96,6 +96,12 @@ router.get('/api/patern/vehicles/all',Auth.authAccessToken,function (req, res){
     Vehicle.ReadAll(req,res)
 })
 
+router.get('/api/patern/vehicles/:id',Auth.authAccessToken,function (req, res){
+    futil.logger.debug('\n' + futil.shtm() + '- [ REQ HEADERS VEHICLE SELECTED ] | INFO ' + util.inspect(req.headers));
+    futil.logger.debug('\n' + futil.shtm() + '- [ REQ PARAMS VEHICLE SELECTED ] | INFO ' + util.inspect(req.params));
+    futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY VEHICLE SELECTED ] | INFO ' + util.inspect(req.body));
+    Vehicle.ReadSelected(req,res)
+})
 
 router.post('/api/patern/vehicle/usage',Auth.authAccessToken,function (req, res){
     futil.logger.debug('\n' + futil.shtm() + '- [ REQ HEADERS VEHICLE USAGE ] | INFO ' + util.inspect(req.headers));

@@ -219,6 +219,58 @@ var ReadAll = async function(req,res){
 
 }
 
+var ReadSelected = async function (req,res){
+    try{
+        futil.logger.debug('\n' + futil.shtm() + '- [ REQ HEADERS] | INFO ' + util.inspect(req.headers));
+        futil.logger.debug('\n' + futil.shtm() + '- [ REQ PARAMSS] | INFO ' + util.inspect(req.params));
+        futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY] | INFO ' + util.inspect(req.body));
+
+        var vehicleid = req.headers.vehicleid
+
+        const count = await Vehicle.count({
+            where: {
+                vehicleid: vehicleid
+            }
+        });
+
+        futil.logger.debug('\n' + futil.shtm() + '- [ RESULT COUNT VEHICLE ] | QUERING ' + util.inspect(count));
+
+        var resp = await Vehicle.findAll({ raw:true,
+            where: {
+                vehicleid: vehicleid
+            },
+            order: [
+                ['id', 'ASC'],
+                ]
+            });
+
+            futil.logger.debug('\n' + futil.shtm() + '- [ RESULT VEHICLE SELECTED] | QUERING ' + util.inspect(resp));
+
+            var j=1
+           
+            for (i=0;i<=resp.length-1;i++){
+                resp[i].no = j
+                j++
+            }
+
+            var response = {"total":count,"rows":resp}   
+            futil.logger.debug('\n' + futil.shtm() + '- [ RESULT RESPONSE] | QUERING ' + util.inspect(response));  
+            result.code = 200
+            result.status ="success"
+            result.data = response
+            res.send(result);
+
+
+
+    } catch (err){
+        futil.logger.debug('\n' + futil.shtm() + '- [ ERROR ] | QUERING ' + util.inspect(err));
+        result.code = 400
+        result.status ="failed"
+        result.data = "Read data failed"
+        res.send(result);
+    }
+}
+
 var ReadOdometer = async function(req,res){
     try {    
 
@@ -569,6 +621,7 @@ var DeleteAll = async function (req,res){
 module.exports = {
     Create,
     Read,
+    ReadSelected,
     ReadAll,
     ReadAllData,
     ReadKMDriven,
