@@ -225,7 +225,7 @@ var ReadSelected = async function (req,res){
         futil.logger.debug('\n' + futil.shtm() + '- [ REQ PARAMSS] | INFO ' + util.inspect(req.params));
         futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY] | INFO ' + util.inspect(req.body));
 
-        var vehicleid = req.params.vehicleid
+        var vehicleid = req.params.id
 
         const count = await Vehicle.count({
             where: {
