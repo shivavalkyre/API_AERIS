@@ -398,7 +398,7 @@ var ReadSelectedCategory = async function (req,res){
                         futil.logger.debug('\n' + futil.shtm() + '- [ VEHICLE TYPE ' + j + '] | INFO ' + util.inspect(vehicle_type)); 
                        
                         if (vehicle_type.indexOf(vehicle_category)>0){
-                            data[i].vehicle_category = vehicle_category
+                            data.data[i].vehicle_category = vehicle_category
                         }
 
                         break loop2;
