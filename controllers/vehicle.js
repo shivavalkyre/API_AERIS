@@ -219,6 +219,123 @@ var ReadAll = async function(req,res){
 
 }
 
+var ReadCategory = async function (req,res){
+
+    var access_token = process.env.TOKEN_AERTRAK
+    var accountId = process.env.ACCOUNTID
+    var url_latest_status = process.env.URL_LATEST_STATUS_AERTRACK +'accountId='+ accountId +'&includeHierarchy =false'
+
+    futil.logger.debug('\n' + futil.shtm() + '- [ ASSETS LATEST STATUS ] | INFO ');  
+    futil.logger.debug('\n' + futil.shtm() + '- [ URL ASSETS LATEST STATUS ] | INFO ' + util.inspect(url_latest_status)); 
+
+    const config = {
+        headers:{
+            token : access_token
+        }
+      }
+
+    futil.logger.debug('\n' + futil.shtm() + '- [ REQUEST HEADER] | INFO ' + util.inspect(config)); 
+    let res1 = await axios.get(url_latest_status,config)
+        .then(function (response) {
+
+            
+            // futil.logger.debug('\n' + futil.shtm() + '- [ RESPONSE BODY] | INFO ' + util.inspect(response.data)); 
+            // var result = {
+            //     "status":true,
+            //     "message":"success",
+            //     "data": response.data
+            // }
+
+            // res.setHeader("Content-Type", "application/json");
+            // res.writeHead(200);
+            // res.end(JSON.stringify(result));
+
+            var all_ctr=0
+            var sedan_ctr=0
+            var wagon_ctr=0 
+            var dmax_ctr=0
+            var dmux_ctr=0
+
+            var data_length = response.data.length
+            var data =  response.data
+
+            const count = await Vehicle.count();
+            var resp = await Vehicle.findAll({ raw:true});
+            for (i=0;i<=data_length-1;i++){
+                for (j=0;j<=resp.length-1;j++){
+                    if (resp[i].vehicleVin == data[j].vin){
+                        var vehicle_type = data[j].vehicle_type
+                        if (vehicle_type.indexOf('Sedan')>0){
+                            sedan_ctr++
+                        }else if(vehicle_type.indexOf('Wagon')>0){
+                            wagon_ctr++
+                        }else if(vehicle_type.indexOf('Max')>0){
+                            dmax_ctr++
+                        }else if(vehicle_type.indexOf('Mux')>0){
+                            dmux_ctr++
+                        }
+                        break;
+                    }
+                }
+            }
+
+            all_ctr = sedan_ctr + wagon_ctr + dmax_ctr + dmux_ctr
+          
+            var result = {
+                status:true,
+                message :"success",
+                data: {
+                    all: all_ctr,
+                    sedan:sedan_ctr,
+                    wagon:wagon_ctr,
+                    dmax:dmax_ctr,
+                    dmux:dmux_ctr
+                }
+            }
+
+           
+            res.setHeader("Content-Type", "application/json");
+            res.writeHead(200);
+            res.end(JSON.stringify(result));
+
+            
+
+            // return response.data
+
+        }).catch(function (error) {
+            if (error.response) {
+                // The request was made and the server responded with a status code
+                // that falls out of the range of 2xx
+                futil.logger.debug('\n' + futil.shtm() + '- [ ERROR RESPONSE DATA ]  ' + util.inspect(error.response.data));
+                futil.logger.debug('\n' + futil.shtm() + '- [ ERROR RESPONSE STATUS ]  ' + util.inspect(error.response.status));
+                futil.logger.debug('\n' + futil.shtm() + '- [ ERROR RESPONSE HEADER ]  ' + util.inspect(error.response.headers));
+                // console.log(error.response.data);
+                // console.log(error.response.status);
+                // console.log(error.response.headers);
+              } else if (error.request) {
+                // The request was made but no response was received
+                // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+                // http.ClientRequest in node.js
+                futil.logger.debug('\n' + futil.shtm() + '- [ ERROR REQUEST ]  ' + util.inspect(error.request));
+                // console.log(error.request);
+              } else {
+                // Something happened in setting up the request that triggered an Error
+                // console.log('Error', error.message);
+                futil.logger.debug('\n' + futil.shtm() + '- [ ERROR ]  ' + util.inspect(error.message));
+              }
+              futil.logger.debug('\n' + futil.shtm() + '- [ ERROR CONFIG]  ' + util.inspect(error.config));
+
+              var result = {  
+
+                "status":false,
+                "message": 'ERROR CONNECTION'
+            }
+            res.setHeader("Content-Type", "application/json");
+            res.writeHead(400);
+            res.end(JSON.stringify(result,null,3));
+         })
+}
+
 var ReadSelected = async function (req,res){
     try{
         futil.logger.debug('\n' + futil.shtm() + '- [ REQ HEADERS] | INFO ' + util.inspect(req.headers));
@@ -625,6 +742,7 @@ module.exports = {
     ReadAll,
     ReadAllData,
     ReadKMDriven,
+    ReadCategory,
     ReadUsage,
     ReadOdometer,
     TripReport,

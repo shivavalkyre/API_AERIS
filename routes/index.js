@@ -90,6 +90,13 @@ router.get('/api/patern/vehicles/all/data',Auth.authAccessToken,function (req, r
     Vehicle.ReadAllData(req,res)
 })
 
+router.get('/api/patern/vehicles/all/category',Auth.authAccessToken,function (req, res){
+    futil.logger.debug('\n' + futil.shtm() + '- [ REQ HEADERS ] | INFO ' + util.inspect(req.headers));
+    futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY ] | INFO ' + util.inspect(req.body));
+    Vehicle.ReadAllCategory(req,res)
+})
+
+
 router.get('/api/patern/vehicles/all',Auth.authAccessToken,function (req, res){
     futil.logger.debug('\n' + futil.shtm() + '- [ REQ HEADERS VEHICLE ALL ] | INFO ' + util.inspect(req.headers));
     futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY VEHICLE ALL ] | INFO ' + util.inspect(req.body));
