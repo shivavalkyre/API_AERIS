@@ -379,7 +379,7 @@ var ReadSelectedCategory = async function (req,res){
             // var dmux_ctr=0
 
             var data_length = response.data.length
-            var data =  response.data
+            var data =  response.data.data
 
             const count = await Vehicle.count();
             var resp = await Vehicle.findAll({ raw:true});
