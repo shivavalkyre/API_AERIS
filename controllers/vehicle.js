@@ -265,9 +265,9 @@ var ReadCategory = async function (req,res){
             // futil.logger.debug('\n' + futil.shtm() + '- [ DATA ] | INFO ' + util.inspect(data)); 
             // futil.logger.debug('\n' + futil.shtm() + '- [ RESP] | INFO ' + util.inspect(resp)); 
 
-            for (i=0;i<=data_length-1;i++){
+            loop1: for (i=0;i<=data_length-1;i++){
                 futil.logger.debug('\n' + futil.shtm() + '- [ DATA ] | INFO ' + util.inspect(data[i])); 
-                for (j=0;j<=resp.length-1;j++){
+                loop2: for (j=0;j<=resp.length-1;j++){
                     futil.logger.debug('\n' + futil.shtm() + '- [ RESP] | INFO ' + util.inspect(resp[j])); 
                     if (resp[j].vehicleVin == data[i].vin){
                         var vehicle_type = resp[j].vehicle_type
@@ -276,16 +276,16 @@ var ReadCategory = async function (req,res){
                        
                         if (vehicle_type.indexOf('Sedan')>0){
                             sedan_ctr++
-                            break;
+                            break loop2;
                         }else if(vehicle_type.indexOf('Wagon')>0){
                             wagon_ctr++
-                            break;
+                            break loop2;
                         }else if(vehicle_type.indexOf('Max')>0){
                             dmax_ctr++
-                            break;
+                            break loop2;
                         }else if(vehicle_type.indexOf('Mux')>0){
                             dmux_ctr++
-                            break;
+                            break loop2;
                         }
                         
                     }
