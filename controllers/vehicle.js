@@ -402,11 +402,11 @@ var ReadSelectedCategory = async function (req,res){
                         futil.logger.debug('\n' + futil.shtm() + '- [ VEHICLE TYPE ' + j + '] | INFO ' + util.inspect(vehicle_type)); 
                         futil.logger.debug('\n' + futil.shtm() + '- [ VEHICLE CATEGORY ' + j + '] | INFO ' + util.inspect(vehicle_category)); 
 
-                        if (vehicle_type.indexOf(vehicle_category.trim())>0){
+                        
                             futil.logger.debug('\n' + futil.shtm() + '- [ VEHICLE TYPE ' + j + '] | INFO ' + util.inspect('ADA')); 
                             data[i].vehicleType = vehicle_type
                             futil.logger.debug('\n' + futil.shtm() + '- [ DATA '+ i +'] | INFO ' + util.inspect(data[i]))
-                        }
+
 
                         break loop2;
                     }
