@@ -93,7 +93,7 @@ router.get('/api/patern/vehicles/all/data',Auth.authAccessToken,function (req, r
 router.get('/api/patern/vehicles/all/category',Auth.authAccessToken,function (req, res){
     futil.logger.debug('\n' + futil.shtm() + '- [ REQ HEADERS ] | INFO ' + util.inspect(req.headers));
     futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY ] | INFO ' + util.inspect(req.body));
-    Vehicle.ReadAllCategory(req,res)
+    Vehicle.ReadCategory(req,res)
 })
 
 
