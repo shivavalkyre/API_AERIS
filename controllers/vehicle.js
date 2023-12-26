@@ -265,6 +265,9 @@ var ReadCategory = async function (req,res){
                 for (j=0;j<=resp.length-1;j++){
                     if (resp[i].vehicleVin == data[j].vin){
                         var vehicle_type = data[j].vehicle_type
+                        
+                        futil.logger.debug('\n' + futil.shtm() + '- [ VEHICLE TYPE ] | INFO ' + util.inspect(vehicle_type)); 
+                       
                         if (vehicle_type.indexOf('Sedan')>0){
                             sedan_ctr++
                         }else if(vehicle_type.indexOf('Wagon')>0){
