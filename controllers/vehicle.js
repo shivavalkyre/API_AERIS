@@ -277,18 +277,18 @@ var ReadCategory = async function (req,res){
                        
                         if (vehicle_type.indexOf('Sedan')>0){
                             sedan_ctr++
-                            break loop2;
+                            
                         }else if(vehicle_type.indexOf('Wagon')>0){
                             wagon_ctr++
-                            break loop2;
+                            
                         }else if(vehicle_type.indexOf('Max')>0){
                             dmax_ctr++
-                            break loop2;
+                            
                         }else if(vehicle_type.indexOf('Mux')>0){
                             dmux_ctr++
-                            break loop2;
+                           
                         }
-                        
+                        break loop2;
                     }
                 }
             }
