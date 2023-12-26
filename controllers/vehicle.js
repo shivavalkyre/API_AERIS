@@ -284,7 +284,7 @@ var ReadCategory = async function (req,res){
                         }else if(vehicle_type.indexOf('Max')>0){
                             dmax_ctr++
                             
-                        }else if(vehicle_type.indexOf('Mux')>0){
+                        }else {
                             dmux_ctr++
                            
                         }
