@@ -381,6 +381,10 @@ var ReadSelectedCategory = async function (req,res){
             var data_length = response.data.length
             var data =  response.data
 
+            data.forEach(object => {
+                object.vehicleType = '';
+              })
+
             const count = await Vehicle.count();
             var resp = await Vehicle.findAll({ raw:true});
 
@@ -398,7 +402,7 @@ var ReadSelectedCategory = async function (req,res){
                         futil.logger.debug('\n' + futil.shtm() + '- [ VEHICLE TYPE ' + j + '] | INFO ' + util.inspect(vehicle_type)); 
                        
                         if (vehicle_type.indexOf(vehicle_category)>0){
-                            data[i].vehicle_type = vehicle_type
+                            data[i].vehicleType = vehicle_type
                             futil.logger.debug('\n' + futil.shtm() + '- [ DATA '+ i +'] | INFO ' + util.inspect(data[i]))
                         }
 
