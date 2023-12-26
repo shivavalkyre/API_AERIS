@@ -99,7 +99,7 @@ router.get('/api/patern/vehicles/all/category',Auth.authAccessToken,function (re
 router.get('/api/patern/vehicles/selected/category/:category',Auth.authAccessToken,function (req, res){
     futil.logger.debug('\n' + futil.shtm() + '- [ REQ HEADERS ] | INFO ' + util.inspect(req.headers));
     futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY ] | INFO ' + util.inspect(req.body));
-    Vehicle.ReadCategory(req,res)
+    Vehicle.ReadSelectedCategory(req,res)
 })
 
 
