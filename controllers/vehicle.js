@@ -400,7 +400,8 @@ var ReadSelectedCategory = async function (req,res){
                         var vehicle_type = resp[j].vehicle_type
 
                         futil.logger.debug('\n' + futil.shtm() + '- [ VEHICLE TYPE ' + j + '] | INFO ' + util.inspect(vehicle_type)); 
-                       
+                        futil.logger.debug('\n' + futil.shtm() + '- [ VEHICLE CATEGORY ' + j + '] | INFO ' + util.inspect(vehicle_category)); 
+
                         if (vehicle_type.indexOf(vehicle_category)>0){
                             data[i].vehicleType = vehicle_type
                             futil.logger.debug('\n' + futil.shtm() + '- [ DATA '+ i +'] | INFO ' + util.inspect(data[i]))
