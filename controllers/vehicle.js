@@ -262,6 +262,9 @@ var ReadCategory = async function (req,res){
             const count = await Vehicle.count();
             var resp = await Vehicle.findAll({ raw:true});
 
+            futil.logger.debug('\n' + futil.shtm() + '- [ DATA ] | INFO ' + util.inspect(data)); 
+            futil.logger.debug('\n' + futil.shtm() + '- [ RESP] | INFO ' + util.inspect(resp)); 
+
             for (i=0;i<=data_length-1;i++){
                 for (j=0;j<=resp.length-1;j++){
                     if (resp[j].vehicleVin == data[i].vin){
