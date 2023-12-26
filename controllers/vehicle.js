@@ -263,7 +263,7 @@ var ReadCategory = async function (req,res){
             var resp = await Vehicle.findAll({ raw:true});
 
             // futil.logger.debug('\n' + futil.shtm() + '- [ DATA ] | INFO ' + util.inspect(data)); 
-            // futil.logger.debug('\n' + futil.shtm() + '- [ RESP] | INFO ' + util.inspect(resp)); 
+            futil.logger.debug('\n' + futil.shtm() + '- [ RESP] | INFO ' + util.inspect(resp)); 
 
             loop1: for (i=0;i<=data_length-1;i++){
                 futil.logger.debug('\n' + futil.shtm() + '- [ DATA '+ i +'] | INFO ' + util.inspect(data[i].vehicleUid)); 
