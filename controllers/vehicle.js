@@ -413,12 +413,18 @@ var ReadSelectedCategory = async function (req,res){
                 }
             }
 
+            var data1=[]
+            for (k=0;k<= data.length-1;k++){
+                if(data[k].vehicleType == vehicle_category){
+                    data1.push(data[k])
+                }
+            }
       
           
             var result = {
                 status:true,
                 message :"success",
-                data: data
+                data: data1
             }
 
            
