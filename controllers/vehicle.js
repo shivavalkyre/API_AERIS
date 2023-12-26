@@ -262,8 +262,8 @@ var ReadCategory = async function (req,res){
             const count = await Vehicle.count();
             var resp = await Vehicle.findAll({ raw:true});
 
-            futil.logger.debug('\n' + futil.shtm() + '- [ DATA ] | INFO ' + util.inspect(data)); 
-            futil.logger.debug('\n' + futil.shtm() + '- [ RESP] | INFO ' + util.inspect(resp)); 
+            // futil.logger.debug('\n' + futil.shtm() + '- [ DATA ] | INFO ' + util.inspect(data)); 
+            // futil.logger.debug('\n' + futil.shtm() + '- [ RESP] | INFO ' + util.inspect(resp)); 
 
             for (i=0;i<=data_length-1;i++){
                 futil.logger.debug('\n' + futil.shtm() + '- [ DATA ] | INFO ' + util.inspect(data[i])); 
@@ -272,7 +272,7 @@ var ReadCategory = async function (req,res){
                     if (resp[j].vehicleVin == data[i].vin){
                         var vehicle_type = data[i].vehicle_type
 
-                        futil.logger.debug('\n' + futil.shtm() + '- [ VEHICLE TYPE ] | INFO ' + util.inspect(vehicle_type)); 
+                        // futil.logger.debug('\n' + futil.shtm() + '- [ VEHICLE TYPE ] | INFO ' + util.inspect(vehicle_type)); 
                        
                         if (vehicle_type.indexOf('Sedan')>0){
                             sedan_ctr++
