@@ -261,11 +261,12 @@ var ReadCategory = async function (req,res){
 
             const count = await Vehicle.count();
             var resp = await Vehicle.findAll({ raw:true});
+
             for (i=0;i<=data_length-1;i++){
                 for (j=0;j<=resp.length-1;j++){
-                    if (resp[i].vehicleVin == data[j].vin){
-                        var vehicle_type = data[j].vehicle_type
-                        
+                    if (resp[j].vehicleVin == data[i].vin){
+                        var vehicle_type = data[i].vehicle_type
+
                         futil.logger.debug('\n' + futil.shtm() + '- [ VEHICLE TYPE ] | INFO ' + util.inspect(vehicle_type)); 
                        
                         if (vehicle_type.indexOf('Sedan')>0){
