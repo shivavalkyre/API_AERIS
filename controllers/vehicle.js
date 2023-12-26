@@ -266,11 +266,11 @@ var ReadCategory = async function (req,res){
             // futil.logger.debug('\n' + futil.shtm() + '- [ RESP] | INFO ' + util.inspect(resp)); 
 
             loop1: for (i=0;i<=data_length-1;i++){
-                futil.logger.debug('\n' + futil.shtm() + '- [ DATA '+ i +'] | INFO ' + util.inspect(data[i].vin)); 
+                futil.logger.debug('\n' + futil.shtm() + '- [ DATA '+ i +'] | INFO ' + util.inspect(data[i].vehicleUid)); 
                 loop2: for (j=0;j<=resp.length-1;j++){
                     // futil.logger.debug('\n' + futil.shtm() + '- [ RESP] | INFO ' + util.inspect(resp[j])); 
                     
-                    if (data[i].vin == resp[j].vehicleVin){
+                    if (data[i].vehicleUid == resp[j].vehicleVin){
                         var vehicle_type = resp[j].vehicle_type
 
                         futil.logger.debug('\n' + futil.shtm() + '- [ VEHICLE TYPE ' + j + '] | INFO ' + util.inspect(vehicle_type)); 
