@@ -283,7 +283,7 @@ var ReadCategory = async function (req,res){
                         }else if(vehicle_type.indexOf('Mux')>0){
                             dmux_ctr++
                         }
-                        // break;
+                        break;
                     }
                 }
             }
