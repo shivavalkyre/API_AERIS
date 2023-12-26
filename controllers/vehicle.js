@@ -236,7 +236,7 @@ var ReadCategory = async function (req,res){
 
     futil.logger.debug('\n' + futil.shtm() + '- [ REQUEST HEADER] | INFO ' + util.inspect(config)); 
     let res1 = await axios.get(url_latest_status,config)
-        .then(function (response) {
+        .then(async function (response) {
 
             
             // futil.logger.debug('\n' + futil.shtm() + '- [ RESPONSE BODY] | INFO ' + util.inspect(response.data)); 
