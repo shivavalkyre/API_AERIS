@@ -272,7 +272,7 @@ var ReadCategory = async function (req,res){
                     if (resp[j].vehicleVin == data[i].vin){
                         var vehicle_type = resp[j].vehicle_type
 
-                        futil.logger.debug('\n' + futil.shtm() + '- [ VEHICLE TYPE ] | INFO ' + util.inspect(vehicle_type)); 
+                        futil.logger.debug('\n' + futil.shtm() + '- [ VEHICLE TYPE ' + j + '] | INFO ' + util.inspect(vehicle_type)); 
                        
                         if (vehicle_type.indexOf('Sedan')>0){
                             sedan_ctr++
@@ -283,7 +283,7 @@ var ReadCategory = async function (req,res){
                         }else if(vehicle_type.indexOf('Mux')>0){
                             dmux_ctr++
                         }
-                        break;
+                        // break;
                     }
                 }
             }
