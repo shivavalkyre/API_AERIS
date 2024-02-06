@@ -96,6 +96,12 @@ router.get('/api/patern/vehicles/all/category',Auth.authAccessToken,function (re
     Vehicle.ReadCategory(req,res)
 })
 
+router.get('/api/patern/vehicles/all/category1',Auth.authAccessToken,function (req, res){
+    futil.logger.debug('\n' + futil.shtm() + '- [ REQ HEADERS ] | INFO ' + util.inspect(req.headers));
+    futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY ] | INFO ' + util.inspect(req.body));
+    Vehicle.ReadCategory1(req,res)
+})
+
 router.get('/api/patern/vehicles/selected/category/:category',Auth.authAccessToken,function (req, res){
     futil.logger.debug('\n' + futil.shtm() + '- [ REQ HEADERS ] | INFO ' + util.inspect(req.headers));
     futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY ] | INFO ' + util.inspect(req.body));

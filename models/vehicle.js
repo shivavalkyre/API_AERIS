@@ -78,6 +78,9 @@ module.exports = (sequelize, DataTypes) => {
   },
   init_odometer:{
       type: DataTypes.INTEGER
+  }
+  ,vehicle_name:{
+    type: DataTypes.STRING
   },
   createdBy:{
     type: DataTypes.INTEGER

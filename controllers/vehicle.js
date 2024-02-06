@@ -350,6 +350,92 @@ var ReadCategory = async function (req,res){
          })
 }
 
+var ReadCategory1 = async function (req,res){
+    var access_token = process.env.TOKEN_AERTRAK
+    var accountId = process.env.ACCOUNTID
+    var url_latest_status = process.env.URL_LATEST_STATUS_AERTRACK +'accountId='+ accountId +'&includeHierarchy =false'
+
+    futil.logger.debug('\n' + futil.shtm() + '- [ ASSETS LATEST STATUS ] | INFO ');  
+    futil.logger.debug('\n' + futil.shtm() + '- [ URL ASSETS LATEST STATUS ] | INFO ' + util.inspect(url_latest_status)); 
+
+    const config = {
+        headers:{
+            token : access_token
+        }
+      }
+
+    futil.logger.debug('\n' + futil.shtm() + '- [ REQUEST HEADER] | INFO ' + util.inspect(config)); 
+    let res1 = await axios.get(url_latest_status,config)
+        .then(async function (response) {
+            var all_ctr=0
+            var sedan_ctr=0
+            var wagon_ctr=0 
+            var dmax_ctr=0
+            var dmux_ctr=0
+
+            var data_length = response.data.length
+            futil.logger.debug('\n' + futil.shtm() + '- [ DATA LENGTH] | INFO ' + util.inspect(data_length)); 
+
+            var data =  response.data
+
+            
+            const count = await Vehicle.count();
+            var resp = await Vehicle.findAll({ raw:true});
+
+            futil.logger.debug('\n' + futil.shtm() + '- [ RESP] | INFO ' + util.inspect(resp)); 
+
+            var sedanCtr = 0
+            var wagonCtr  = 0
+            var d_maxCtr = 0 
+            var d_muxCtr = 0
+
+            for (i=0;i<=data_length-1;i++){
+                futil.logger.debug('\n' + futil.shtm() + '- [ DATA '+ i +'] | INFO ' + util.inspect(data[i].vehicleName)); 
+               
+                if (data[i].vehicleName !=null){
+                    var vehicleName = data[i].vehicleName
+
+
+                    if (vehicleName.includes("MAZDA6")){
+                        if(vehicleName.includes("WAGON AT")){
+                            wagonCtr++
+                        }else{
+                            sedanCtr++
+                        }
+                    }else if(vehicleName.includes("D-Max")){
+                        d_maxCtr++
+                    }else if(vehicleName.includes("Mu-X")){
+                        d_muxCtr++
+                    }else{
+                        sedanCtr++
+                    }
+                }
+                
+
+            }
+
+            all_ctr = sedanCtr + wagonCtr+d_maxCtr+d_muxCtr
+
+            var result = {
+                status:true,
+                message :"success",
+                data: {
+                    all: all_ctr,
+                    sedan:sedanCtr,
+                    wagon:wagonCtr,
+                    dmax:d_maxCtr,
+                    dmux:d_muxCtr
+                }
+            }
+
+           
+            res.setHeader("Content-Type", "application/json");
+            res.writeHead(200);
+            res.end(JSON.stringify(result));
+
+        })
+}
+
 var ReadSelectedCategory = async function (req,res){
     var access_token = process.env.TOKEN_AERTRAK
     var accountId = process.env.ACCOUNTID
@@ -878,6 +964,7 @@ module.exports = {
     ReadAllData,
     ReadKMDriven,
     ReadCategory,
+    ReadCategory1,
     ReadUsage,
     ReadOdometer,
     TripReport,
