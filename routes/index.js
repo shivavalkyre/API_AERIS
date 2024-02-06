@@ -108,6 +108,12 @@ router.get('/api/patern/vehicles/selected/category/:category',Auth.authAccessTok
     Vehicle.ReadSelectedCategory(req,res)
 })
 
+router.get('/api/patern/vehicles/selected/category1/:category',Auth.authAccessToken,function (req, res){
+    futil.logger.debug('\n' + futil.shtm() + '- [ REQ HEADERS ] | INFO ' + util.inspect(req.headers));
+    futil.logger.debug('\n' + futil.shtm() + '- [ REQ BODY ] | INFO ' + util.inspect(req.body));
+    Vehicle.ReadSelectedCategory1(req,res)
+})
+
 
 router.get('/api/patern/vehicles/all',Auth.authAccessToken,function (req, res){
     futil.logger.debug('\n' + futil.shtm() + '- [ REQ HEADERS VEHICLE ALL ] | INFO ' + util.inspect(req.headers));

@@ -556,6 +556,107 @@ var ReadSelectedCategory = async function (req,res){
          })
 }
 
+var ReadSelectedCategory1 = async function (req,res){
+    var access_token = process.env.TOKEN_AERTRAK
+    var accountId = process.env.ACCOUNTID
+    var url_latest_status = process.env.URL_LATEST_STATUS_AERTRACK +'accountId='+ accountId +'&includeHierarchy =false'
+    var vehicle_category = req.params.category
+
+    futil.logger.debug('\n' + futil.shtm() + '- [ ASSETS LATEST STATUS ] | INFO ');  
+    futil.logger.debug('\n' + futil.shtm() + '- [ URL ASSETS LATEST STATUS ] | INFO ' + util.inspect(url_latest_status)); 
+
+    
+    const config = {
+        headers:{
+            token : access_token
+        }
+      }
+
+      futil.logger.debug('\n' + futil.shtm() + '- [ REQUEST HEADER] | INFO ' + util.inspect(config)); 
+      let res1 = await axios.get(url_latest_status,config)
+          .then(async function (response) {
+            //   var all_ctr=0
+            //   var sedan_ctr=0
+            //   var wagon_ctr=0 
+            //   var dmax_ctr=0
+            //   var dmux_ctr=0
+  
+              var data_length = response.data.length
+              futil.logger.debug('\n' + futil.shtm() + '- [ DATA LENGTH] | INFO ' + util.inspect(data_length)); 
+  
+              var data =  response.data
+  
+              
+              const count = await Vehicle.count();
+              var resp = await Vehicle.findAll({ raw:true});
+  
+              futil.logger.debug('\n' + futil.shtm() + '- [ RESP] | INFO ' + util.inspect(resp)); 
+  
+              var sedanData = []
+              var wagonData  = []
+              var d_maxData = []
+              var d_muxData = []
+  
+              for (i=0;i<=data_length-1;i++){
+                  futil.logger.debug('\n' + futil.shtm() + '- [ DATA '+ i +'] | INFO ' + util.inspect(data[i].vehicleName)); 
+                 
+                  if (data[i].vehicleName !=null){
+                      var vehicleName = data[i].vehicleName
+  
+  
+                      if (vehicleName.includes("MAZDA6")){
+                          if(vehicleName.includes("WAGON AT")){
+                            //   wagonCtr++
+                            wagonData.push(data[i])
+                          }else{
+                            //   sedanCtr++
+                            sedanData.push(data[i])
+                          }
+                      }else if(vehicleName.includes("D-Max")){
+                            d_maxData.push(data[i])
+                        //   d_maxCtr++
+                      }else if(vehicleName.includes("Mu-X")){
+                        //   d_muxCtr++
+                            d_muxData.push(data[i])
+                      }else{
+                        //   sedanCtr++
+                        sedanData.push(data[i])
+                      }
+                  }
+                  
+  
+              }
+
+            if (vehicle_category == 'Sedan'){
+                data = sedanData
+            }else if(vehicle_category == 'Wagon'){
+                data = wagonData
+            }else if(vehicle_category == 'D-Max'){
+                data = d_maxData
+            }else{
+                data = d_muxData
+            }
+  
+              var result = {
+                status:true,
+                message :"success",
+                data: data
+            }
+
+           
+            res.setHeader("Content-Type", "application/json");
+            res.writeHead(200);
+            res.end(JSON.stringify(result));
+  
+             
+              res.setHeader("Content-Type", "application/json");
+              res.writeHead(200);
+              res.end(JSON.stringify(result));
+  
+          })
+      
+}
+
 var ReadSelected = async function (req,res){
     try{
         futil.logger.debug('\n' + futil.shtm() + '- [ REQ HEADERS] | INFO ' + util.inspect(req.headers));
@@ -960,6 +1061,7 @@ module.exports = {
     Read,
     ReadSelected,
     ReadSelectedCategory,
+    ReadSelectedCategory1,
     ReadAll,
     ReadAllData,
     ReadKMDriven,

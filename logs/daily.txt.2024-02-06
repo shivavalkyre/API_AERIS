@@ -1,0 +1,1311 @@
+{"level":"debug","message":"\n06 Feb 2024 09:43:22 - [ W A K E   U P ] | STARTING 'PATERN CONTROLLER ADAPTER'"}
+{"level":"debug","message":"06 Feb 2024 09:43:22 - [ W A K E   U P ] | RUN AT PATH: /api/pattern, PORT: 3002"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:22 - [ DATABASE U P ] | STARTING 'db_fleet'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:58 - [ HEADERS ] | INFO {\n  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNjk5MDE0Nzc0fQ.aoWabyzgagkn_G5cpBmxdBKFfib8Bq7aLY4wUHX7KI8',\n  'user-agent': 'PostmanRuntime/7.29.2',\n  accept: '*/*',\n  'cache-control': 'no-cache',\n  'postman-token': '13ff9e91-c106-4446-bdf7-9a7f711f2fe1',\n  host: 'localhost:3002',\n  'accept-encoding': 'gzip, deflate, br',\n  connection: 'keep-alive'\n}"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:58 - [ TOKEN ] | INFO 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNjk5MDE0Nzc0fQ.aoWabyzgagkn_G5cpBmxdBKFfib8Bq7aLY4wUHX7KI8'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:58 - [ REQ HEADERS ] | INFO {\n  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNjk5MDE0Nzc0fQ.aoWabyzgagkn_G5cpBmxdBKFfib8Bq7aLY4wUHX7KI8',\n  'user-agent': 'PostmanRuntime/7.29.2',\n  accept: '*/*',\n  'cache-control': 'no-cache',\n  'postman-token': '13ff9e91-c106-4446-bdf7-9a7f711f2fe1',\n  host: 'localhost:3002',\n  'accept-encoding': 'gzip, deflate, br',\n  connection: 'keep-alive'\n}"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:58 - [ REQ BODY ] | INFO {}"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:58 - [ ASSETS LATEST STATUS ] | INFO "}
+{"level":"debug","message":"\n06 Feb 2024 09:43:58 - [ URL ASSETS LATEST STATUS ] | INFO 'https://api-aertrakasia.aeris.com/v1.0/api/things/accounts/latestStatus?accountId=22437&includeHierarchy =false'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:58 - [ REQUEST HEADER] | INFO {\n  headers: {\n    token: 'eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJmdlRkMFRhLWV0NkhfeUxybzhuUTU3cTZLOTRUWTlyRjJPOXU0aVN0cVpvIn0.eyJqdGkiOiJkZjA1ZDI4NS1mOTMyLTQ4YTEtYTM0ZC1lNTVhZGI0YTYxZTEiLCJleHAiOjE3MTQ4ODM4NjEsIm5iZiI6MCwiaWF0IjoxNzA3MTA3ODYxLCJpc3MiOiJodHRwczovL2FlcnRyYWsta2V5Y2xvYWsxLmFlcmlzY2xvdWQuY29tL2F1dGgvcmVhbG1zL2FlcnRyYWsiLCJhdWQiOiJmbGVldC1hZXJ0cmFrLWFwaSIsInN1YiI6IjQ0YjdlODg5LTVkZTItNGE5MS1iMGQ1LTBhZmY1ZGZiYjkyNSIsInR5cCI6IklEIiwiYXpwIjoiZmxlZXQtYWVydHJhay1hcGkiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiJmMmIwOTZmMS1jMjM1LTRkZTYtODNiMS03ZjdmOTg1ZjViOGUiLCJhY3IiOiIxIiwiYWNjb3VudElkIjoiMjI0MzciLCJ1bml0c1N5c3RlbSI6Ik1FVFJJQyIsInNlcnZpY2VDb25maWciOiJ7XCJlbmRwb2ludFwiOlwiaHR0cDovL2FlcmNsb3VkLmFwcC5zdmMuY2x1c3Rlci5sb2NhbDo4MDgwL3YxXCIsXCJscEVuZHBvaW50XCI6XCJodHRwczovL2xvbmdwb2xsLWFlcmNsb3VkLXByZXByb2QuYWVyaXNjbG91ZC5jb20vdjFcIixcImFwaUtleVwiOlwiMjRlZGY2MWQtYTNlNy00YzViLTk3MDQtMmQyZGUwMWNjNGNhXCJ9Iiwicm9sZXMiOiJBZG1pbiIsImFhZUFwcCI6IntcIm5hbWVcIjpcIkFlcmlzRmxlZXRNYW5hZ2VtZW50XCIsXCJjb250YWluZXJcIjpcImZsZWV0U3RyZWFtXCJ9IiwibmFtZSI6IktvcmxhbnRhcyBVc2VyIiwiYWNjSWQiOiIyMjQzNyIsImxhbmd1YWdlIjoiZW4iLCJyZWFsbSI6ImFlcnRyYWsiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZXJjb21uK2tvcmxhbnRhc0BnbWFpbC5jb20iLCJlbWFpbCI6ImFlcmNvbW4ra29ybGFudGFzQGdtYWlsLmNvbSIsImdyb3VwIjoiZmxlZXQifQ.ZwIOafjy7GqsLG3ljUoomRUg2fR0KTZj0CA1IDuY_01OfmwIa1817uc1oKIHvXdHeIvOpmERjKl2TrH3r1yxrZt-Xizgks9npUbsTgzcLwHACVr-eHYdJ97upnwPQZouhC7kg3-VCA2RnmMGiVJtUZqDahN6tM7B0S5n87zztdsQG8mypmfzI__8me-wtxC7BK7m1O4lro4IIdZUlaF1Odjk0bYZCSueeNjH1Jemg9cBLgt5ZTCTiCPhHSHViWdRTGSfYcwPGj7rbUZsKlaM7tbk_LvlonzhZQlrYB-tWLPfhA0GBFS98poLgHpjbuXBVXrFtKYOtPmH-fAvGC_VvQ'\n  }\n}"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ RESP] | INFO []"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 0] | INFO 'JM6GL1033P0508033'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 1] | INFO '9608'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 2] | INFO '9308'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 3] | INFO 'MPATFS87JPT016563'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 4] | INFO 'MPATFS87JPT015649'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 5] | INFO 'JM6GL1033P0502866'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 6] | INFO '9905'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 7] | INFO 'JM6GL1033P0503707'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 8] | INFO '4890'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 9] | INFO 'MPAUCR87GPT000522'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 10] | INFO 'JM6GL1033P0507974'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 11] | INFO 'JM6GL1033P0510611'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 12] | INFO 'JM6GL1033P0509321'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 13] | INFO 'MPATFS87JPT016564'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 14] | INFO 'MPATFS87JPT015650'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 15] | INFO 'JM6GL1033P0502981'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 16] | INFO 'MPAUCR87GPT000534'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 17] | INFO 'JM6GL1033P0504267'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 18] | INFO 'MPAUCR87GPT000528'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 19] | INFO 'JM6GL1033P0507992'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 20] | INFO 'JM6GL1033P0510670'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 21] | INFO 'MPATFS87JPT016565'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 22] | INFO 'JM6GL1033P0509323'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 23] | INFO 'MPATFS87JPT015651'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 24] | INFO 'JM6GL1033P0503132'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 25] | INFO 'JM6GL1033P0504231'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 26] | INFO '9231'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 27] | INFO 'JM6GL1033P0505343'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 28] | INFO '9732'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 29] | INFO 'JM6GL1033P0508003'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 30] | INFO '9807'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 31] | INFO 'MPATFS87JPT016566'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 32] | INFO 'JM6GL1033P0509340'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 33] | INFO 'MPATFS87JPT015652'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 34] | INFO 'JM6GL1033P0504210'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 35] | INFO 'JM6GL1033P0503202'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 36] | INFO '9632'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 37] | INFO 'Z.98'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 38] | INFO '9705'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 39] | INFO 'MPATFS87JPT016567'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 40] | INFO 'JM6GL1033P0510663'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 41] | INFO 'JM6GL1033P0509391'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 42] | INFO 'MPATFS87JPT015653'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 43] | INFO 'JM6GL1033P0504307'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 44] | INFO 'JM6GL1033P0503200'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 45] | INFO 'Z.10'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 46] | INFO 'Z.3'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 47] | INFO 'JM6GL1033P0507984'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 48] | INFO 'MPATFS87JPT016568'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 49] | INFO 'JM6GL1033P0510651'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 50] | INFO 'JM6GL1033P0509355'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 51] | INFO 'MPATFS87JPT015654'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 52] | INFO 'JM6GL1033P0504261'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 53] | INFO '9831'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 54] | INFO 'JM6GL1033P0503329'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 55] | INFO 'MPAUCR87GPT000521'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 56] | INFO 'Z.3 SUBDITWAL DAN PJR DITGAKUM2'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 57] | INFO 'MPATFS87JPT016569'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 58] | INFO 'JM6GL1033P0510640'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 59] | INFO 'JM6GL1033P0509379'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 60] | INFO 'MPATFS87JPT015655'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 61] | INFO 'JM6GL1033P0504236'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 62] | INFO 'JM6GL1033P0504824'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 63] | INFO 'MPAUCR87GPT000517'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 64] | INFO 'MPAUCR87GPT000531'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 65] | INFO 'JM6GL1033P0508043'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 66] | INFO 'MPATFS87JPT016570'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 67] | INFO 'JM6GL1033P0510645'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 68] | INFO 'JM6GL1033P0509344'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 69] | INFO 'MPATFS87JPT015656'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 70] | INFO 'JM6GL1033P0504360'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 71] | INFO 'JM6GL1033P0505100'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 72] | INFO '9630'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 73] | INFO 'MPAUCR87GPT000547'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 74] | INFO 'JM6GL1033P0508029'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 75] | INFO 'MPATFS87JPT016571'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 76] | INFO 'JM6GL1033P0510654'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 77] | INFO 'JM6GL1033P0509350'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 78] | INFO 'MPATFS87JPT015657'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 79] | INFO 'JM6GL1033P0504399'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 80] | INFO 'JM6GL1033P0505375'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 81] | INFO 'MPAUCR87GPT000510'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 82] | INFO 'Z. 3 P'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 83] | INFO 'JM6GL1033P0508016'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 84] | INFO 'MPATFS87JPT016572'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 85] | INFO 'JM6GL1033P0510725'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 86] | INFO 'MPATFS87JPT015658'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 87] | INFO 'JM6GL1033P0509335'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 88] | INFO 'JM6GL1033P0504366'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 89] | INFO 'MPAUCR87GPT000520'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 90] | INFO 'MPAUCR87GPT000555'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 91] | INFO 'JM6GL1033P0508008'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 92] | INFO 'MPATFS87JPT016573'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 93] | INFO 'Z.2'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 94] | INFO 'MPATFS87JPT015659'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 95] | INFO 'JM6GL1033P0509386'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 96] | INFO 'JM6GL1033P0504310'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 97] | INFO 'Z.93'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 98] | INFO 'MPAUCR87GPT000563'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 99] | INFO 'JM6GL1033P0502802'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 100] | INFO 'JM6GL1033P0507981'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 101] | INFO 'MPATFS87JPT016574'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 102] | INFO 'MPATFS87JPT015660'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 103] | INFO 'JM6GL1033P0510739'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 104] | INFO 'JM6GL1033P0509438'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 105] | INFO 'JM6GL1033P0504388'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 106] | INFO '9900'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 107] | INFO 'Z.96'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 108] | INFO 'JM6GL1033P0508100'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 109] | INFO 'MPATFS87JPT016575'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 110] | INFO 'MPATFS87JPT015661'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 111] | INFO 'JM6GL1033P0510718'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 112] | INFO 'JM6GL1033P0509435'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 113] | INFO 'JM6GL1033P0504362'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 114] | INFO 'MPAUCR87GPT000580'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 115] | INFO '9702'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 116] | INFO 'Z. 9 P'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 117] | INFO 'MPATFS87JPT016576'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 118] | INFO 'JM6GL1033P0508079'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 119] | INFO 'MPATFS87JPT015662'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 120] | INFO 'JM6GL1033P0510699'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 121] | INFO 'JM6GL1033P0509450'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 122] | INFO 'JM6GL1033P0504344'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 123] | INFO '9132'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 124] | INFO '7579'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 125] | INFO 'MPAUCR87GPT000596'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 126] | INFO 'JM6GL1033P0505368'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 127] | INFO 'JM6GL1033P0508076'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 128] | INFO 'MPATFS87JPT016577'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 129] | INFO 'JM6GL1033P0510694'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 130] | INFO 'MPATFS87JPT015663'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 131] | INFO 'JM6GL1033P0504459'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 132] | INFO '9210'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 133] | INFO 'MPAUCR87GPT000601'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 134] | INFO '9601'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 135] | INFO 'MPATFS87JPT016578'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 136] | INFO 'JM6GL1033P0508053'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 137] | INFO 'MPATFS87JPT015664'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 138] | INFO 'JM6GL1033P0504445'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 139] | INFO 'JM6GL1033P0510706'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 140] | INFO 'JM6GL1033P0509393'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 141] | INFO '9532'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 142] | INFO '9704'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 143] | INFO 'MPATFS87JPT016579'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 144] | INFO 'JM6GL1033P0508073'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 145] | INFO 'MPATFS87JPT015665'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 146] | INFO 'JM6GL1033P0504431'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 147] | INFO 'JM6GL1033P0510689'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 148] | INFO '9309'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 149] | INFO 'Z.94'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 150] | INFO 'JM6GL1033P0504543'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 151] | INFO 'MPATFS87JPT016580'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 152] | INFO 'JM6GL1033P0508117'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 153] | INFO 'JM6GL1033P0504424'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 154] | INFO 'MPATFS87JPT015666'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 155] | INFO 'JM6GL1033P0502715'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 156] | INFO '9306'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 157] | INFO 'JM6GL1033P0510709'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 158] | INFO 'MPAUCR87GPT000593'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 159] | INFO '9205'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 160] | INFO 'MPATFS87JPT016581'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 161] | INFO 'JM6GL1033P0508113'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 162] | INFO 'JM6GL1033P0504452'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 163] | INFO 'JM6GL1033P0509467'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 164] | INFO 'SUBDITWAL DAN PJR DITGAKUM 3'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 165] | INFO 'Z.92'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 166] | INFO '9803'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 167] | INFO 'MPATFS87JPT016582'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 168] | INFO 'MPATFS87JPT015668'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 169] | INFO 'JM6GL1033P0508096'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 170] | INFO 'JM6GL1033P0504490'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 171] | INFO 'JM6GL1033P0509460'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 172] | INFO 'JM6GL1033P0510784'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 173] | INFO 'MPAUCR87GPT000557'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 174] | INFO '9304'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 175] | INFO 'MPATFS87JPT016583'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 176] | INFO 'MPATFS87JPT015669'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 177] | INFO 'JM6GL1033P0504502'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 178] | INFO 'JM6GL1033P0508106'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 179] | INFO 'JM6GL1033P0505290'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 180] | INFO 'JM6GL1033P0509446'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 181] | INFO 'JM6GL1033P0510773'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 182] | INFO '9430'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 183] | INFO '9301'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 184] | INFO 'MPATFS87JPT016584'"}
+{"level":"debug","message":"\n06 Feb 2024 09:43:59 - [ DATA 185] | INFO 'MPATFS87JPT015670'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 186] | INFO 'JM6GL1033P0504484'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 187] | INFO 'JM6GL1033P0508089'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 188] | INFO 'JM6GL1033P0509433'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 189] | INFO '9607'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 190] | INFO 'Z.9 SUBDITWAL DAN PJR DITGAKUM'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 191] | INFO 'MPATFS87JPT016585'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 192] | INFO 'MPATFS87JPT015671'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 193] | INFO 'JM6GL1033P0504521'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 194] | INFO 'JM6GL1033P0508098'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 195] | INFO 'JM6GL1033P0509459'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 196] | INFO 'JM6GL1033P0510777'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 197] | INFO 'MPATFS87JPT015667'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 198] | INFO 'JM6GL1033P0502836'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 199] | INFO '9352'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 200] | INFO 'MPAUCR87GPT000513'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 201] | INFO '9402'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 202] | INFO 'MPATFS87JPT016586'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 203] | INFO 'JM6GL1033P0504566'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 204] | INFO 'MPATFS87JPT015672'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 205] | INFO 'SUBDITWAL DAN PJR DITGAKUM 1'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 206] | INFO 'JM6GL1033P0509427'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 207] | INFO 'JM6GL1033P0510760'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 208] | INFO '9530'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 209] | INFO '9701'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 210] | INFO 'MPATFS87JPT016587'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 211] | INFO 'JM6GL1033P0504558'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 212] | INFO 'MPATFS87JPT015673'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 213] | INFO 'JM6GL1033P0508065'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 214] | INFO '9311'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 215] | INFO 'JM6GL1033P0510765'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 216] | INFO 'MPAUCR87GPT000602'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 217] | INFO 'MPATFS87JPT016588'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 218] | INFO '9401'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 219] | INFO 'JM6GL1033P0504553'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 220] | INFO 'MPATFS87JPT015674'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 221] | INFO 'JM6GL1033P0508049'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 222] | INFO 'JM6GL1033P0509405'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 223] | INFO 'JM6GL1033P0510746'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 224] | INFO 'MPAUCR87GPT000560'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 225] | INFO 'MPATFS87JPT016589'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 226] | INFO 'JM6GL1033P0504644'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 227] | INFO 'MPATFS87JPT015675'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 228] | INFO '9403_860696060479403'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 229] | INFO 'JM6GL1033P0508182'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 230] | INFO 'Z.3 SUBDITWAL DAN PJR DITGAKUM'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 231] | INFO '9609'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 232] | INFO 'JM6GL1033P0510743'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 233] | INFO 'MPATFS87JPT016590'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 234] | INFO 'JM6GL1033P0504650'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 235] | INFO '9232'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 236] | INFO 'MPATFS87JPT015676'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 237] | INFO '9405'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 238] | INFO 'JM6GL1033P0508177'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 239] | INFO '9409'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 240] | INFO 'JM6GL1033P0510787'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 241] | INFO 'MPATFS87JPT016591'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 242] | INFO 'JM6GL1033P0504640'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 243] | INFO '9230'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 244] | INFO 'MPATFS87JPT015677'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 245] | INFO '9404'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 246] | INFO 'JM6GL1033P0508146'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 247] | INFO 'JM6GL1033P0509486'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 248] | INFO 'JM6GL1033P0510893'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 249] | INFO '9724'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 250] | INFO 'JM6GL1033P0504591'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 251] | INFO 'MPATFS87JPT016592'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 252] | INFO 'MPATFS87JPT015678'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 253] | INFO 'MPAUCR87GPT000567'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 254] | INFO '9502'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 255] | INFO 'JM6GL1033P0509538'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 256] | INFO 'JM6GL1033P0508138'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 257] | INFO '9411'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 258] | INFO 'JM6GL1033P0502864'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 259] | INFO 'JM6GL1033P0504622'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 260] | INFO 'MPATFS87JPT016593'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 261] | INFO 'MPATFS87JPT015679'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 262] | INFO '9131'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 263] | INFO '9107'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 264] | INFO '9806'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 265] | INFO 'JM6GL1033P0508180'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 266] | INFO 'JM6GL1033P0510868'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 267] | INFO 'JM6GL1033P0504696'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 268] | INFO 'MPATFS87JPT016594'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 269] | INFO 'MPATFS87JPT015680'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 270] | INFO 'MPAUCR87GPT000561'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 271] | INFO '9302'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 272] | INFO '9510'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 273] | INFO 'JM6GL1033P0508176'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 274] | INFO 'JM6GL1033P0510857'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 275] | INFO 'JM6GL1033P0504770'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 276] | INFO 'MPATFS87JPT016595'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 277] | INFO 'MPATFS87JPT015681'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 278] | INFO 'JM6GL1033P0504275'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 279] | INFO 'Z 11'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 280] | INFO 'JM6GL1033P0509526'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 281] | INFO 'JM6GL1033P0508126'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 282] | INFO 'JM6GL1033P0510910'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 283] | INFO 'JM6GL1033P0504743'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 284] | INFO 'MPATFS87JPT016596'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 285] | INFO 'MPATFS87JPT015682'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 286] | INFO '9A05'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 287] | INFO '9731'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 288] | INFO '9808'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 289] | INFO 'JM6GL1033P0510935'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 290] | INFO 'JM6GL1033P0508143'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 291] | INFO 'JM6GL1033P0504707'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 292] | INFO 'MPATFS87JPT016597'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 293] | INFO 'MPATFS87JPT015683'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 294] | INFO '9202'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 295] | INFO 'Z.8'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 296] | INFO '9410'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 297] | INFO '9206'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 298] | INFO 'JM6GL1033P0508164'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 299] | INFO 'JM6GL1033P0504830'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 300] | INFO 'MPATFS87JPT016598'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 301] | INFO 'MPATFS87JPT015684'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 302] | INFO '9119'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 303] | INFO 'MPAUCR87GPT000529'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 304] | INFO 'JM6GL1033P0509495'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 305] | INFO 'JM6GL1033P0510961'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 306] | INFO 'JM6GL1033P0508149'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 307] | INFO 'JM6GL1033P0505017'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 308] | INFO 'MPATFS87JPT016599'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 309] | INFO 'MPATFS87JPT015685'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 310] | INFO '9801'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 311] | INFO 'Z.91'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 312] | INFO 'JM6GL1033P0509508'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 313] | INFO '9207'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 314] | INFO 'JM6GL1033P0508141'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 315] | INFO 'JM6GL1033P0505020'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 316] | INFO 'MPATFS87JPT016600'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 317] | INFO 'MPATFS87JPT015686'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 318] | INFO 'MPAUCR87GPT000541'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 319] | INFO '9111'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 320] | INFO '9708'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 321] | INFO 'JM6GL1033P0510926'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 322] | INFO 'JM6GL1033P0508123'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 323] | INFO 'JM6GL1033P0505104'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 324] | INFO 'MPATFS87JPT016601'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 325] | INFO 'MPATFS87JPT015687'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 326] | INFO '9501'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 327] | INFO 'MPAUCR87GPT000599'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 328] | INFO 'JM6GL1033P0510981'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 329] | INFO 'JM6GL1033P0509531'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 330] | INFO '9408'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 331] | INFO 'JM6GL1033P0505114'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 332] | INFO 'MPATFS87JPT016602'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 333] | INFO 'MPATFS87JPT015688'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 334] | INFO 'Z.91 SUBDITWAL DAN PJR DITGAKUM'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 335] | INFO 'MPAUCR87GPT000586'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 336] | INFO 'JM6GL1033P0510985'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 337] | INFO '9509'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 338] | INFO 'JM6GL1033P0509087'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 339] | INFO 'fmc640-test'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 340] | INFO 'JM6GL1033P0505120'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 341] | INFO 'MPATFS87JPT016603'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 342] | INFO 'MPATFS87JPT015689'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 343] | INFO '9303'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 344] | INFO 'MPAUCR87GPT000589'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 345] | INFO 'JM6GL1033P0509482'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 346] | INFO 'JM6GL1033P0511012'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 347] | INFO '9709'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 348] | INFO 'JM6GL1033P0505168'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 349] | INFO 'MPATFS87JPT016604'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 350] | INFO 'MPATFS87JPT015690'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 351] | INFO '9403'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 352] | INFO 'MPAUCR87GPT000506'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 353] | INFO '9209'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 354] | INFO '9208'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 355] | INFO 'JM6GL1033P0509052'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 356] | INFO 'JM6GL1033P0505195'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 357] | INFO 'MPATFS87JPT016605'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 358] | INFO 'MPATFS87JPT015691'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 359] | INFO '9A04'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 360] | INFO 'MPAUCR87GPT000516'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 361] | INFO 'JM6GL1033P0510336'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 362] | INFO 'JM6GL1033P0511003'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 363] | INFO '9606'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 364] | INFO 'JM6GL1033P0505278'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 365] | INFO 'MPATFS87JPT016606'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 366] | INFO 'MPATFS87JPT015692'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 367] | INFO '6293'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 368] | INFO '9112'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 369] | INFO 'MPAUCR87GPT000566'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 370] | INFO 'JM6GL1033P0510329'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 371] | INFO 'JM6GL1033P0511026'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 372] | INFO 'JM6GL1033P0509083'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 373] | INFO 'JM6GL1033P0505210'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 374] | INFO 'MPATFS87JPT016607'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 375] | INFO 'MPATFS87JPT015693'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 376] | INFO '9603'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 377] | INFO 'MPAUCR87GPT000565'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 378] | INFO 'JM6GL1033P0510344'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 379] | INFO 'JM6GL1033P0511020'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 380] | INFO '9507'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 381] | INFO 'JM6GL1033P0505229'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 382] | INFO 'MPATFS87JPT016608'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 383] | INFO 'MPATFS87JPT015694'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 384] | INFO '9604'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 385] | INFO 'MPAUCR87GPT000591'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 386] | INFO 'JM6GL1033P0511063'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 387] | INFO 'JM6GL1033P0510371'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 388] | INFO 'JM6GL1033P0509030'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 389] | INFO 'JM6GL1033P0505221'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 390] | INFO 'MPATFS87JPT016609'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 391] | INFO 'MPATFS87JPT015695'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 392] | INFO 'JM6GL1033P0507898'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 393] | INFO '9204'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 394] | INFO 'MPAUCR87GPT000538'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 395] | INFO 'JM6GL1033P0511050'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 396] | INFO 'JM6GL1033P0510375'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 397] | INFO 'JM6GL1033P0509068'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 398] | INFO 'JM6GL1033P0505235'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 399] | INFO 'MPATFS87JPT016610'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 400] | INFO 'MPATFS87JPT015696'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 401] | INFO '3073'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 402] | INFO 'JM6GL1033P0507891'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 403] | INFO '9804'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 404] | INFO 'JM6GL1033P0510378'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 405] | INFO 'MPAUCR87GPT000519'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 406] | INFO 'JM6GL1033P0511099'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 407] | INFO '9809'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 408] | INFO 'JM6GL1033P0505337'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 409] | INFO 'MPATFS87JPT016611'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 410] | INFO 'MPATFS87JPT015697'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 411] | INFO 'JM6GL1033P0507881'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 412] | INFO 'JM6GL1033P0504876'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 413] | INFO 'JM6GL1033P0511091'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 414] | INFO '9903'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 415] | INFO '9605'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 416] | INFO 'JM6GL1033P0509060'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 417] | INFO 'JM6GL1033P0505604'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 418] | INFO 'MPATFS87JPT016612'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 419] | INFO 'MPATFS87JPT015698'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 420] | INFO '9602'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 421] | INFO 'JM6GL1033P0507884'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 422] | INFO 'JM6GL1033P0511077'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 423] | INFO 'BESMENT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 424] | INFO 'JM6GL1033P0504957'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 425] | INFO 'MPAUCR87GPT000553'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 426] | INFO 'JM6GL1033P0509037'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 427] | INFO 'MPATFS87JPT016613'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 428] | INFO 'MPATFS87JPT015699'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 429] | INFO '9305'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 430] | INFO 'JM6GL1033P0507836'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 431] | INFO 'JM6GL1033P0511080'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 432] | INFO 'JM6GL1033P0504899'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 433] | INFO 'JM6GL1033P0510421'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 434] | INFO 'JM6GL1033P0509175'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 435] | INFO 'MPAUCR87GPT000551'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 436] | INFO 'MPATFS87JPT016614'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 437] | INFO 'MPATFS87JPT015700'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 438] | INFO 'JM6GL1033P0507856'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 439] | INFO '9118'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 440] | INFO 'JM6GL1033P0504903'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 441] | INFO 'JM6GL1033P0510388'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 442] | INFO 'JM6GL1033P0509173'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 443] | INFO 'MPAUCR87GPT000537'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 444] | INFO 'MPATFS87JPT016615'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 445] | INFO 'MPATFS87JPT015701'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 446] | INFO 'JM6GL1033P0507841'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 447] | INFO '9A03'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 448] | INFO 'JM6GL1033P0504996'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 449] | INFO '9805'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 450] | INFO '9506'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 451] | INFO 'MPAUCR87GPT000518'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 452] | INFO 'MPATFS87JPT016616'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 453] | INFO 'MPATFS87JPT015702'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 454] | INFO '9777'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 455] | INFO '9211'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 456] | INFO 'JM6GL1033P0505045'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 457] | INFO 'JM6GL1033P0510397'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 458] | INFO 'JM6GL1033P0504536'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 459] | INFO 'JM6GL1033P0509141'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 460] | INFO 'MPAUCR87GPT000546'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 461] | INFO 'MPATFS87JPT016617'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 462] | INFO 'MPATFS87JPT015703'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 463] | INFO 'SUBDITWAL DAN PJR DITGAKUM 2'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 464] | INFO 'JM6GL1033P0505040'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 465] | INFO 'JM6GL1033P0510495'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 466] | INFO '9703'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 467] | INFO '9707'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 468] | INFO '9432'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 469] | INFO 'MPATFS87JPT016618'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 470] | INFO 'MPATFS87JPT015704'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 471] | INFO 'JM6GL1033P0507893'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 472] | INFO '9109'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 473] | INFO 'JM6GL1033P0510494'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 474] | INFO 'JM6GL1033P0509172'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 475] | INFO '9830'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 476] | INFO 'MPATFS87JPT016619'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 477] | INFO 'MPATFS87JPT015705'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 478] | INFO 'JM6GL1033P0507872'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 479] | INFO 'JM6GL1033P0510489'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 480] | INFO '9120'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 481] | INFO 'JM6GL1033P0509134'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 482] | INFO 'MPATFS87JPT016620'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 483] | INFO 'Z.9'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 484] | INFO 'MPATFS87JPT015721'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 485] | INFO 'JM6GL1033P0502954'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 486] | INFO '9706'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 487] | INFO '9406'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 488] | INFO 'JM6GL1033P0504782'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 489] | INFO 'JM6GL1033P0509131'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 490] | INFO 'MPATFS87JPT016621'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 491] | INFO 'MPAUCR87GPT000579'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 492] | INFO 'MPATFS87JPT015722'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 493] | INFO 'JM6GL1033P0502913'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 494] | INFO 'SUBDITWAL DAN PJR DITGAKUM 4'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 495] | INFO 'JM6GL1033P0504890'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 496] | INFO 'JM6GL1033P0510471'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 497] | INFO 'JM6GL1033P0509214'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 498] | INFO 'MPATFS87JPT016622'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 499] | INFO '9902'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 500] | INFO 'MPATFS87JPT015723'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 501] | INFO 'JM6GL1033P0507906'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 502] | INFO '9113'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 503] | INFO '9508'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 504] | INFO 'JM6GL1033P0510466'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 505] | INFO 'MPATFS87JPT016623'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 506] | INFO '9332'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 507] | INFO 'MPATFS87JPT015724'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 508] | INFO 'JM6GL1033P0502855'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 509] | INFO 'JM6GL1033P0507928'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 510] | INFO 'JM6GL1033P0504927'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 511] | INFO 'JM6GL1033P0510464'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 512] | INFO 'MPATFS87JPT016624'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 513] | INFO 'JM6GL1033P0509202'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 514] | INFO 'MPAUCR87GPT000505'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 515] | INFO 'MPATFS87JPT015725'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 516] | INFO 'JM6GL1033P0502883'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 517] | INFO 'JM6GL1033P0507973'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 518] | INFO '9201'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 519] | INFO 'MPATFS87JPT016625'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 520] | INFO 'JM6GL1033P0510459'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 521] | INFO '9511'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 522] | INFO 'MPAUCR87GPT000583'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 523] | INFO '9832'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 524] | INFO 'JM6GL1033P0502849'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 525] | INFO 'JM6GL1033P0507962'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 526] | INFO '9505'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 527] | INFO 'MPATFS87JPT016626'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 528] | INFO 'JM6GL1033P0509242'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 529] | INFO 'JM6GL1033P0510454'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 530] | INFO 'MPATFS87JPT015726'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 531] | INFO '9130'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 532] | INFO 'MPAUCR87GPT000558'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 533] | INFO 'JM6GL1033P0507941'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 534] | INFO 'JM6GL1033P0504550'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 535] | INFO 'MPATFS87JPT016627'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 536] | INFO 'JM6GL1033P0509225'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 537] | INFO 'JM6GL1033P0510559'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 538] | INFO 'MPATFS87JPT015727'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 539] | INFO 'MPAUCR87GPT000545'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 540] | INFO 'MPAUCR87GPT000525'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 541] | INFO 'JM6GL1033P0502975'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 542] | INFO 'JM6GL1033P0507958'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 543] | INFO '9503'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 544] | INFO 'MPATFS87JPT016628'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 545] | INFO 'JM6GL1033P0509208'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 546] | INFO 'JM6GL1033P0510562'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 547] | INFO 'MPATFS87JPT015728'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 548] | INFO 'MPAUCR87GPT000544'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 549] | INFO '9531'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 550] | INFO 'JM6GL1033P0503032'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 551] | INFO 'JM6GL1033P0507909'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 552] | INFO 'MPATFS87JPT016629'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 553] | INFO 'JM6GL1033P0509236'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 554] | INFO 'JM6GL1033P0510554'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 555] | INFO '9A01'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 556] | INFO 'MPATFS87JPT015729'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 557] | INFO 'MPAUCR87GPT000533'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 558] | INFO '9901'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 559] | INFO 'JM6GL1033P0503003'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 560] | INFO 'JM6GL1033P0507926'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 561] | INFO 'MPATFS87JPT016630'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 562] | INFO 'JM6GL1033P0509290'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 563] | INFO 'JM6GL1033P0510528'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 564] | INFO 'MPATFS87JPT015730'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 565] | INFO 'JM6GL1033P0503074'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 566] | INFO 'Z.13A'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 567] | INFO 'MPAUCR87GPT000562'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 568] | INFO 'JM6GL1033P0503022'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 569] | INFO 'JM6GL1033P0507971'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 570] | INFO 'MPATFS87JPT016631'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 571] | INFO 'JM6GL1033P0510536'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 572] | INFO 'JM6GL1033P0509280'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 573] | INFO 'MPATFS87JPT015731'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 574] | INFO 'JM6GL1033P0505349'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 575] | INFO 'MPAUCR87GPT000564'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 576] | INFO 'JM6GL1033P0503171'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 577] | INFO '9330'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 578] | INFO 'MPATFS87JPT016632'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 579] | INFO 'JM6GL1033P0507946'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 580] | INFO 'JM6GL1033P0510538'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 581] | INFO 'JM6GL1033P0509271'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 582] | INFO 'MPATFS87JPT015732'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 583] | INFO '9802'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 584] | INFO '9631'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 585] | INFO 'JM6GL1033P0503211'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 586] | INFO 'MPAUCR87GPT000552'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 587] | INFO '7214'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 588] | INFO 'JM6GL1033P0507966'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 589] | INFO 'MPATFS87JPT016633'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 590] | INFO 'JM6GL1033P0509265'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 591] | INFO 'JM6GL1033P0510551'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 592] | INFO 'MPATFS87JPT015733'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 593] | INFO '9114'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 594] | INFO 'MPAUCR87GPT000511'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 595] | INFO 'JM6GL1033P0503124'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 596] | INFO '9431'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 597] | INFO 'JM6GL1033P0507936'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 598] | INFO 'MPATFS87JPT016634'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 599] | INFO 'JM6GL1033P0509269'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 600] | INFO '9810'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 601] | INFO 'MPATFS87JPT015734'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 602] | INFO '9203'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 603] | INFO 'JM6GL1033P0503166'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 604] | INFO 'MPAUCR87GPT000559'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 605] | INFO 'JM6GL1033P0507933'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 606] | INFO 'JM6GL1033P0509264'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 607] | INFO 'JM6GL1033P0510592'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 608] | INFO 'MPATFS87JPT015735'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 609] | INFO '5534'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 610] | INFO 'Z.97'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 611] | INFO '9A02'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 612] | INFO 'JM6GL1033P0503303'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 613] | INFO '9730'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 614] | INFO 'JM6GL1033P0507922'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 615] | INFO '9310'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 616] | INFO 'JM6GL1033P0509316'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 617] | INFO 'MPATFS87JPT015646'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 618] | INFO 'MPATFS87JPT016560'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 619] | INFO 'MPAUCR87GPT000524'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 620] | INFO '9504'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 621] | INFO 'JM6GL1033P0503265'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 622] | INFO 'Z.95'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 623] | INFO 'JM6GL1033P0507969'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 624] | INFO '9710'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 625] | INFO 'JM6GL1033P0510596'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 626] | INFO 'MPATFS87JPT016561'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 627] | INFO 'MPATFS87JPT015647'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 628] | INFO 'MPAUCR87GPT000549'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 629] | INFO 'JM6GL1033P0502910'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 630] | INFO 'JM6GL1033P0503271'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 631] | INFO '5064'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 632] | INFO 'MPAUCR87GPT000504'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 633] | INFO '9407'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 634] | INFO '9610'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 635] | INFO '9307'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 636] | INFO 'MPATFS87JPT016562'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 637] | INFO 'MPATFS87JPT015648'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 638] | INFO 'JM6GL1033P0502873'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 639] | INFO '9331'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 640] | INFO 'JM6GL1033P0503547'"}
+{"level":"debug","message":"\n06 Feb 2024 09:44:00 - [ DATA 641] | INFO 'MPAUCR87GPT000582'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:00 - [ W A K E   U P ] | STARTING 'PATERN CONTROLLER ADAPTER'"}
+{"level":"debug","message":"06 Feb 2024 09:45:00 - [ W A K E   U P ] | RUN AT PATH: /api/pattern, PORT: 3002"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:00 - [ DATABASE U P ] | STARTING 'db_fleet'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:36 - [ W A K E   U P ] | STARTING 'PATERN CONTROLLER ADAPTER'"}
+{"level":"debug","message":"06 Feb 2024 09:45:36 - [ W A K E   U P ] | RUN AT PATH: /api/pattern, PORT: 3002"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:36 - [ DATABASE U P ] | STARTING 'db_fleet'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:45 - [ HEADERS ] | INFO {\n  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNjk5MDE0Nzc0fQ.aoWabyzgagkn_G5cpBmxdBKFfib8Bq7aLY4wUHX7KI8',\n  'user-agent': 'PostmanRuntime/7.29.2',\n  accept: '*/*',\n  'cache-control': 'no-cache',\n  'postman-token': '184cbe7f-08af-49c1-986d-0bdf03a559fa',\n  host: 'localhost:3002',\n  'accept-encoding': 'gzip, deflate, br',\n  connection: 'keep-alive'\n}"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:45 - [ TOKEN ] | INFO 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNjk5MDE0Nzc0fQ.aoWabyzgagkn_G5cpBmxdBKFfib8Bq7aLY4wUHX7KI8'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:45 - [ REQ HEADERS ] | INFO {\n  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNjk5MDE0Nzc0fQ.aoWabyzgagkn_G5cpBmxdBKFfib8Bq7aLY4wUHX7KI8',\n  'user-agent': 'PostmanRuntime/7.29.2',\n  accept: '*/*',\n  'cache-control': 'no-cache',\n  'postman-token': '184cbe7f-08af-49c1-986d-0bdf03a559fa',\n  host: 'localhost:3002',\n  'accept-encoding': 'gzip, deflate, br',\n  connection: 'keep-alive'\n}"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:45 - [ REQ BODY ] | INFO {}"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:45 - [ ASSETS LATEST STATUS ] | INFO "}
+{"level":"debug","message":"\n06 Feb 2024 09:45:45 - [ URL ASSETS LATEST STATUS ] | INFO 'https://api-aertrakasia.aeris.com/v1.0/api/things/accounts/latestStatus?accountId=22437&includeHierarchy =false'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:45 - [ REQUEST HEADER] | INFO {\n  headers: {\n    token: 'eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJmdlRkMFRhLWV0NkhfeUxybzhuUTU3cTZLOTRUWTlyRjJPOXU0aVN0cVpvIn0.eyJqdGkiOiJkZjA1ZDI4NS1mOTMyLTQ4YTEtYTM0ZC1lNTVhZGI0YTYxZTEiLCJleHAiOjE3MTQ4ODM4NjEsIm5iZiI6MCwiaWF0IjoxNzA3MTA3ODYxLCJpc3MiOiJodHRwczovL2FlcnRyYWsta2V5Y2xvYWsxLmFlcmlzY2xvdWQuY29tL2F1dGgvcmVhbG1zL2FlcnRyYWsiLCJhdWQiOiJmbGVldC1hZXJ0cmFrLWFwaSIsInN1YiI6IjQ0YjdlODg5LTVkZTItNGE5MS1iMGQ1LTBhZmY1ZGZiYjkyNSIsInR5cCI6IklEIiwiYXpwIjoiZmxlZXQtYWVydHJhay1hcGkiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiJmMmIwOTZmMS1jMjM1LTRkZTYtODNiMS03ZjdmOTg1ZjViOGUiLCJhY3IiOiIxIiwiYWNjb3VudElkIjoiMjI0MzciLCJ1bml0c1N5c3RlbSI6Ik1FVFJJQyIsInNlcnZpY2VDb25maWciOiJ7XCJlbmRwb2ludFwiOlwiaHR0cDovL2FlcmNsb3VkLmFwcC5zdmMuY2x1c3Rlci5sb2NhbDo4MDgwL3YxXCIsXCJscEVuZHBvaW50XCI6XCJodHRwczovL2xvbmdwb2xsLWFlcmNsb3VkLXByZXByb2QuYWVyaXNjbG91ZC5jb20vdjFcIixcImFwaUtleVwiOlwiMjRlZGY2MWQtYTNlNy00YzViLTk3MDQtMmQyZGUwMWNjNGNhXCJ9Iiwicm9sZXMiOiJBZG1pbiIsImFhZUFwcCI6IntcIm5hbWVcIjpcIkFlcmlzRmxlZXRNYW5hZ2VtZW50XCIsXCJjb250YWluZXJcIjpcImZsZWV0U3RyZWFtXCJ9IiwibmFtZSI6IktvcmxhbnRhcyBVc2VyIiwiYWNjSWQiOiIyMjQzNyIsImxhbmd1YWdlIjoiZW4iLCJyZWFsbSI6ImFlcnRyYWsiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZXJjb21uK2tvcmxhbnRhc0BnbWFpbC5jb20iLCJlbWFpbCI6ImFlcmNvbW4ra29ybGFudGFzQGdtYWlsLmNvbSIsImdyb3VwIjoiZmxlZXQifQ.ZwIOafjy7GqsLG3ljUoomRUg2fR0KTZj0CA1IDuY_01OfmwIa1817uc1oKIHvXdHeIvOpmERjKl2TrH3r1yxrZt-Xizgks9npUbsTgzcLwHACVr-eHYdJ97upnwPQZouhC7kg3-VCA2RnmMGiVJtUZqDahN6tM7B0S5n87zztdsQG8mypmfzI__8me-wtxC7BK7m1O4lro4IIdZUlaF1Odjk0bYZCSueeNjH1Jemg9cBLgt5ZTCTiCPhHSHViWdRTGSfYcwPGj7rbUZsKlaM7tbk_LvlonzhZQlrYB-tWLPfhA0GBFS98poLgHpjbuXBVXrFtKYOtPmH-fAvGC_VvQ'\n  }\n}"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA LENGTH] | INFO 642"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ RESP] | INFO []"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 0] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 1] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 2] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 3] | INFO 'RZ4E - EBF916-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 4] | INFO 'RZ4E - EAY170-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 5] | INFO 'PY22083710-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 6] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 7] | INFO 'PY22089283-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 8] | INFO null"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 9] | INFO 'RZ4E - EAZ228-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 10] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 11] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 12] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 13] | INFO 'RZ4E - EBF918-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 14] | INFO 'RZ4E - EAY164-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 15] | INFO 'PY22084367-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 16] | INFO 'RZ4E - EBE709-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 17] | INFO 'PY22093790-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 18] | INFO 'RZ4E - EAZ233-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 19] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 20] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 21] | INFO 'RZ4E - EBF914-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 22] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 23] | INFO 'RZ4E - EAY166-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 24] | INFO 'PY22085348-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 25] | INFO 'PY22093469-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 26] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 27] | INFO 'PY22099773-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 28] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 29] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 30] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 31] | INFO 'RZ4E - EBF920-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 32] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 33] | INFO 'RZ4E - EAY174-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 34] | INFO 'PY22093302-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 35] | INFO 'PY22085759-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 36] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 37] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 38] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 39] | INFO 'RZ4E - EBF910-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 40] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 41] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 42] | INFO 'RZ4E - EAY167-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 43] | INFO 'PY22093988-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 44] | INFO 'PY22085749-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 45] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 46] | INFO 'DIRGAKUM DES 23'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 47] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 48] | INFO 'RZ4E - EBF907-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 49] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 50] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 51] | INFO 'RZ4E - EAY173-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 52] | INFO 'PY22093756-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 53] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 54] | INFO 'PY22086574-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 55] | INFO 'RZ4E - EAZ229-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 56] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 57] | INFO 'RZ4E - EBF909-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 58] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 59] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 60] | INFO 'RZ4E - EAY176-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 61] | INFO 'PY22093522-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 62] | INFO 'PY22096759-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 63] | INFO 'RZ4E - EAZ217-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 64] | INFO 'RZ4E - EAZ230-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 65] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 66] | INFO 'RZ4E - EBF911-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 67] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 68] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 69] | INFO 'RZ4E - EAY165-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 70] | INFO 'PY22094235-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 71] | INFO 'PY22098393-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 72] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 73] | INFO 'RZ4E - EBE715-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 74] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 75] | INFO 'RZ4E - EBF912-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 76] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 77] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 78] | INFO 'RZ4E - EAY172-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 79] | INFO 'PY22094413-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 80] | INFO 'PY22099974-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 81] | INFO 'RZ4E - EAZ212-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 82] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI/BJP RADEN SLAMET'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 83] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 84] | INFO 'RZ4E - EBF906-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 85] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 86] | INFO 'RZ4E - EAY171-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 87] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 88] | INFO 'PY22094269-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 89] | INFO 'RZ4E - EAZ224-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 90] | INFO 'RZ4E - EBE723-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 91] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 92] | INFO 'RZ4E - EBF915-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 93] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 94] | INFO 'RZ4E - EAY175-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 95] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 96] | INFO 'PY22094001-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 97] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 98] | INFO 'RZ4E - EBE731-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 99] | INFO 'JM6GL1033P0502802'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 100] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 101] | INFO 'RZ4E - EBF913-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 102] | INFO 'RZ4E - EAY169-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 103] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 104] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 105] | INFO 'PY22094363-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 106] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 107] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 108] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 109] | INFO 'RZ4E - EBF946-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 110] | INFO 'RZ4E - EAY182-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 111] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 112] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 113] | INFO 'PY22094243-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 114] | INFO 'RZ4E - EBG920-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 115] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 116] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI/KBP FAIZAL'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 117] | INFO 'RZ4E - EBF947-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 118] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 119] | INFO 'RZ4E - EAY181-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 120] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 121] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 122] | INFO 'PY22094159-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 123] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 124] | INFO ''"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 125] | INFO 'RZ4E - EBG040-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 126] | INFO 'PY22099925-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 127] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 128] | INFO 'RZ4E - EBF948-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 129] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 130] | INFO 'RZ4E - EAY185-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 131] | INFO 'PY22094699-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 132] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 133] | INFO 'RZ4E - EBG032-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 134] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI/PI NJAM PPK PAMATWIL NATARU'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 135] | INFO 'RZ4E - EBF945-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 136] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 137] | INFO 'RZ4E - EAY183-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 138] | INFO 'PY22094623-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 139] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 140] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 141] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 142] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 143] | INFO 'RZ4E - EBF944-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 144] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 145] | INFO 'RZ4E - EAY180-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 146] | INFO 'PY22094568-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 147] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 148] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 149] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 150] | INFO 'PY22095100-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 151] | INFO 'RZ4E - EBF949-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 152] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 153] | INFO 'PY22094534-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 154] | INFO 'RZ4E - EAY178-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 155] | INFO 'JM6GL1033P0502715'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 156] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 157] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 158] | INFO 'RZ4E - EBG038-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 159] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 160] | INFO 'RZ4E - EBF950-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 161] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 162] | INFO 'PY22094663-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 163] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 164] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 165] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 166] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI/PREPARE PRESIDEN JAN 24'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 167] | INFO 'RZ4E - EBF940-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 168] | INFO 'RZ4E - EAY177-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 169] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 170] | INFO 'PY22094857-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 171] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 172] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 173] | INFO 'RZ4E - EBE729-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 174] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 175] | INFO 'RZ4E - EBF943-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 176] | INFO 'RZ4E - EAY191-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 177] | INFO 'PY22094905-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 178] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 179] | INFO 'PY22099456-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 180] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 181] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 182] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 183] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 184] | INFO 'RZ4E - EBF941-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 185] | INFO 'RZ4E - EAY189-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 186] | INFO 'PY22094838-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 187] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 188] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 189] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 190] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI/KBP FAIZAL'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 191] | INFO 'RZ4E - EBF939-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 192] | INFO 'RZ4E - EAY186-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 193] | INFO 'PY22094997-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 194] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 195] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 196] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 197] | INFO 'RZ4E - EAY179-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 198] | INFO 'JM6GL1033P0502836'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 199] | INFO ''"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 200] | INFO 'RZ4E - EAZ211-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 201] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 202] | INFO 'RZ4E - EBF937-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 203] | INFO 'PY22095217-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 204] | INFO 'RZ4E - EAY188-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 205] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 206] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 207] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 208] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 209] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 210] | INFO 'RZ4E - EBF936-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 211] | INFO 'PY22095171-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 212] | INFO 'RZ4E - EAY184-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 213] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 214] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 215] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 216] | INFO 'RZ4E - EBG033-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 217] | INFO 'RZ4E - EBF938-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 218] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 219] | INFO 'PY22095149-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 220] | INFO 'RZ4E - EAY187-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 221] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 222] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 223] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 224] | INFO 'RZ4E - EBE727-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 225] | INFO 'RZ4E - EBF942-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 226] | INFO 'PY22095654-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 227] | INFO 'RZ4E - EAY190-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 228] | INFO null"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 229] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 230] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI/BJP RADEN SLAMET'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 231] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 232] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 233] | INFO 'RZ4E - EBF960-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 234] | INFO 'PY22095688-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 235] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 236] | INFO 'RZ4E - EAY197-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 237] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 238] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 239] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 240] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 241] | INFO 'RZ4E - EBF954-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 242] | INFO 'PY22095633-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 243] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 244] | INFO 'RZ4E - EAY196-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 245] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 246] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 247] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 248] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 249] | INFO ''"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 250] | INFO 'PY22095351-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 251] | INFO 'RZ4E - EBF963-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 252] | INFO 'RZ4E - EAY205-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 253] | INFO 'RZ4E - EBE739-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 254] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 255] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 256] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 257] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 258] | INFO 'JM6GL1033P0502864'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 259] | INFO 'PY22095524-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 260] | INFO 'RZ4E - EBF951-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 261] | INFO 'RZ4E - EAY199-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 262] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 263] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 264] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 265] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 266] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 267] | INFO 'PY22096002-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 268] | INFO 'RZ4E - EBF953-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 269] | INFO 'RZ4E - EAY194-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 270] | INFO 'RZ4E - EBE726-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 271] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 272] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 273] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 274] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 275] | INFO 'PY22096454-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 276] | INFO 'RZ4E - EBF965-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 277] | INFO 'RZ4E - EAY193-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 278] | INFO 'PY22093830-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 279] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI/KBP HOTMAN'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 280] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 281] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 282] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 283] | INFO 'PY22096281-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 284] | INFO 'RZ4E - EBF955-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 285] | INFO 'RZ4E - EAY192-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 286] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 287] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 288] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 289] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 290] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 291] | INFO 'PY22096060-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 292] | INFO 'RZ4E - EBF961-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 293] | INFO 'RZ4E - EAY201-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 294] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 295] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI/KBP HERRI RIO'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 296] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 297] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 298] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 299] | INFO 'PY22096790-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 300] | INFO 'RZ4E - EBF962-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 301] | INFO 'RZ4E - EAY200-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 302] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 303] | INFO 'RZ4E - EAZ231-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 304] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 305] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 306] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 307] | INFO 'PY22097912-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 308] | INFO 'RZ4E - EBF957-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 309] | INFO 'RZ4E - EAY204-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 310] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI/PREPARE PRESIDEN JAN 24'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 311] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 312] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 313] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 314] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 315] | INFO 'PY22097928-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 316] | INFO 'RZ4E - EBF964-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 317] | INFO 'RZ4E - EAY206-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 318] | INFO 'RZ4E - EBE702-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 319] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 320] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 321] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 322] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 323] | INFO 'PY22098419-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 324] | INFO 'RZ4E - EBF958-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 325] | INFO 'RZ4E - EAY195-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 326] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 327] | INFO 'RZ4E - EBG035-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 328] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 329] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 330] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 331] | INFO 'PY22098491-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 332] | INFO 'RZ4E - EBF952-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 333] | INFO 'RZ4E - EAY198-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 334] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 335] | INFO 'RZ4E - EBG918-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 336] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 337] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 338] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 339] | INFO 'fmc640-test'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 340] | INFO 'PY22098519-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 341] | INFO 'RZ4E - EBF959-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 342] | INFO 'RZ4E - EAY203-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 343] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 344] | INFO 'RZ4E - EBG913-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 345] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 346] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 347] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 348] | INFO 'PY22098748-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 349] | INFO 'RZ4E - EBF956-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 350] | INFO 'RZ4E - EAY202-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 351] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 352] | INFO 'RZ4E - EAZ213-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 353] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 354] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 355] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 356] | INFO 'PY22098881-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 357] | INFO 'RZ4E - EBH233-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 358] | INFO 'RZ4E - EAY218-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 359] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 360] | INFO 'RZ4E - EAZ208-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 361] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 362] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 363] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 364] | INFO 'PY22099379-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 365] | INFO 'RZ4E - EBH234-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 366] | INFO 'RZ4E - EAY221-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 367] | INFO '6293'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 368] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 369] | INFO 'RZ4E - EBE744-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 370] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 371] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 372] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 373] | INFO 'PY22098961-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 374] | INFO 'RZ4E - EBH236-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 375] | INFO 'RZ4E - EAY216-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 376] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 377] | INFO 'RZ4E - EBE745-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 378] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 379] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 380] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 381] | INFO 'PY22099072-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 382] | INFO 'RZ4E - EBH231-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 383] | INFO 'RZ4E - EAY220-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 384] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 385] | INFO 'RZ4E - EBG916-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 386] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 387] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 388] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 389] | INFO 'PY22099020-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 390] | INFO 'RZ4E - EBH228-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 391] | INFO 'RZ4E - EAY219-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 392] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 393] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 394] | INFO 'RZ4E - EBE714-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 395] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 396] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 397] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 398] | INFO 'PY22099111-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 399] | INFO 'RZ4E - EBH229-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 400] | INFO 'RZ4E - EAY213-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 401] | INFO null"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 402] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 403] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI/PREPARE PRESIDEN JAN 24'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 404] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 405] | INFO 'RZ4E - EAZ234-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 406] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 407] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 408] | INFO 'PY22099738-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 409] | INFO 'RZ4E - EBH230-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 410] | INFO 'RZ4E - EAY207-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 411] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 412] | INFO 'PY22097065-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 413] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 414] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 415] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 416] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 417] | INFO 'PY22101449-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 418] | INFO 'RZ4E - EBH223-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 419] | INFO 'RZ4E - EAY215-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 420] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 421] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 422] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 423] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 424] | INFO 'PY22097527-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 425] | INFO 'RZ4E - EBE719-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 426] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 427] | INFO 'RZ4E - EBH227-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 428] | INFO 'RZ4E - EAY214-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 429] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 430] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 431] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 432] | INFO 'PY22097192-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 433] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 434] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 435] | INFO 'RZ4E - EBE718-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 436] | INFO 'RZ4E - EBH225-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 437] | INFO 'RZ4E - EAY212-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 438] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 439] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 440] | INFO 'PY22097218-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 441] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 442] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 443] | INFO 'RZ4E - EBE713-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 444] | INFO 'RZ4E - EBH226-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 445] | INFO 'RZ4E - EAY217-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 446] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 447] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 448] | INFO 'PY22097779-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 449] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 450] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 451] | INFO 'RZ4E - EAZ226-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 452] | INFO 'RZ4E - EBH235-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 453] | INFO 'RZ4E - EAY211-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 454] | INFO ''"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 455] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 456] | INFO 'PY22098071-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 457] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 458] | INFO 'PY22095074-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 459] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 460] | INFO 'RZ4E - EBE705-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 461] | INFO 'RZ4E - EBH232-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 462] | INFO 'RZ4E - EAY210-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 463] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 464] | INFO 'PY22098047-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 465] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 466] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 467] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 468] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 469] | INFO 'RZ4E - EBH224-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 470] | INFO 'RZ4E - EAY209-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 471] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 472] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 473] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 474] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 475] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 476] | INFO 'RZ4E - EBH222-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 477] | INFO 'RZ4E - EAY208-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 478] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 479] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 480] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 481] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 482] | INFO 'RZ4E - EBH243-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 483] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:46 - [ DATA 484] | INFO 'RZ4E - EAZ426-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 485] | INFO 'PY22084209-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 486] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 487] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 488] | INFO 'PY22096518-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 489] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 490] | INFO 'RZ4E - EBH246-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 491] | INFO 'RZ4E - EBG917-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 492] | INFO 'RZ4E - EAZ427-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 493] | INFO 'PY22083991-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 494] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 495] | INFO 'PY22097138-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 496] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 497] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 498] | INFO 'RZ4E - EBH244-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 499] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 500] | INFO 'RZ4E - EAZ429-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 501] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 502] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 503] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 504] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 505] | INFO 'RZ4E - EBH238-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 506] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 507] | INFO 'RZ4E - EAZ428-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 508] | INFO 'PY22083629-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 509] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 510] | INFO 'PY22097362-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 511] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 512] | INFO 'RZ4E - EBH241-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 513] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 514] | INFO 'RZ4E - EAZ214-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 515] | INFO 'RZ4E - EAZ425-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 516] | INFO 'PY22083809-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 517] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 518] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 519] | INFO 'RZ4E - EBH240-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 520] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 521] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 522] | INFO 'RZ4E - EBG906-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 523] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 524] | INFO 'PY22083595-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 525] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 526] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 527] | INFO 'RZ4E - EBH239-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 528] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 529] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 530] | INFO 'RZ4E - EAZ430-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 531] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 532] | INFO 'RZ4E - EBE721-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 533] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 534] | INFO 'PY22095137-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 535] | INFO 'RZ4E - EBH237-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 536] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 537] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 538] | INFO 'RZ4E - EAZ422-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 539] | INFO 'RZ4E - EBE704-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 540] | INFO 'RZ4E - EAZ221-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 541] | INFO 'PY22084337-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 542] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 543] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 544] | INFO 'RZ4E - EBH248-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 545] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 546] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 547] | INFO 'RZ4E - EAZ419-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 548] | INFO 'RZ4E - EBE710-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 549] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 550] | INFO 'PY22084680-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 551] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 552] | INFO 'RZ4E - EBH251-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 553] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 554] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 555] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 556] | INFO 'RZ4E - EAZ417-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 557] | INFO 'RZ4E - EBE701-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 558] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 559] | INFO 'PY22084517-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 560] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 561] | INFO 'RZ4E - EBH250-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 562] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 563] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 564] | INFO 'RZ4E - EAZ424-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 565] | INFO 'PY22084976-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 566] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI/KABAG MUTJAB SDM POLRI JAN 24'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 567] | INFO 'RZ4E - EBE720-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 568] | INFO 'PY22084626-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 569] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 570] | INFO 'RZ4E - EBH247-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 571] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 572] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 573] | INFO 'RZ4E - EAZ423-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 574] | INFO 'PY22099800-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 575] | INFO 'RZ4E - EBE733-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 576] | INFO 'PY22085552-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 577] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 578] | INFO 'RZ4E - EBH242-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 579] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 580] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 581] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 582] | INFO 'RZ4E - EAZ418-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 583] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI/PREPARE PRESIDEN JAN 24'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 584] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 585] | INFO 'PY22085803-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 586] | INFO 'RZ4E - EBE722-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 587] | INFO ''"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 588] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 589] | INFO 'RZ4E - EBH245-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 590] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 591] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 592] | INFO 'RZ4E - EAZ416-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 593] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 594] | INFO 'RZ4E - EAZ218-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 595] | INFO 'PY22085295-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 596] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 597] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 598] | INFO 'RZ4E - EBH249-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 599] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 600] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 601] | INFO 'RZ4E - EAZ421-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 602] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 603] | INFO 'PY22085521-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 604] | INFO 'RZ4E - EBE730-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 605] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 606] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 607] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 608] | INFO 'RZ4E - EAZ420-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 609] | INFO ''"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 610] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 611] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 612] | INFO 'PY22086391-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 613] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 614] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 615] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 616] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 617] | INFO 'RZ4E - EAY163-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 618] | INFO 'RZ4E - EBF917-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 619] | INFO 'RZ4E - EAZ223-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 620] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 621] | INFO 'PY22086139-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 622] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 623] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 624] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 625] | INFO 'MAZDA6 ESTATE WAGON AT'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 626] | INFO 'RZ4E - EBF919-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 627] | INFO 'RZ4E - EAY162-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 628] | INFO 'RZ4E - EBE716-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 629] | INFO 'PY22083975-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 630] | INFO 'PY22086176-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 631] | INFO ''"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 632] | INFO 'RZ4E - EAZ209-Mu-X'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 633] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 634] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 635] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 636] | INFO 'RZ4E - EBF908-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 637] | INFO 'RZ4E - EAY168-D-Max'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 638] | INFO 'PY22083746-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 639] | INFO 'SUBDITWAL DAN PJR DITGAKUM KORLANTAS POLRI'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 640] | INFO 'PY22088080-MAZDA6'"}
+{"level":"debug","message":"\n06 Feb 2024 09:45:47 - [ DATA 641] | INFO 'RZ4E - EBG908-Mu-X'"}
+{"date":"Tue Feb 06 2024 09:45:47 GMT+0700 (Western Indonesia Time)","error":{"code":"ERR_HTTP_HEADERS_SENT"},"exception":true,"level":"error","message":"uncaughtException: Cannot set headers after they are sent to the client\nError [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at new NodeError (node:internal/errors:387:5)\n    at ServerResponse.setHeader (node:_http_outgoing:644:11)\n    at D:\\Mine\\Fleet\\API\\API AERIS\\controllers\\vehicle.js:652:19\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async Object.ReadSelectedCategory1 (D:\\Mine\\Fleet\\API\\API AERIS\\controllers\\vehicle.js:576:18)","os":{"loadavg":[0,0,0],"uptime":6061},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\Mine\\Fleet\\API\\API AERIS\\indexAPI.js"],"cwd":"D:\\Mine\\Fleet\\API\\API AERIS","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":1121276,"external":2197096,"heapTotal":35659776,"heapUsed":28736272,"rss":63430656},"pid":9792,"uid":null,"version":"v16.20.2"},"stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at new NodeError (node:internal/errors:387:5)\n    at ServerResponse.setHeader (node:_http_outgoing:644:11)\n    at D:\\Mine\\Fleet\\API\\API AERIS\\controllers\\vehicle.js:652:19\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async Object.ReadSelectedCategory1 (D:\\Mine\\Fleet\\API\\API AERIS\\controllers\\vehicle.js:576:18)","trace":[{"column":5,"file":"node:internal/errors","function":"new NodeError","line":387,"method":null,"native":false},{"column":11,"file":"node:_http_outgoing","function":"ServerResponse.setHeader","line":644,"method":"setHeader","native":false},{"column":19,"file":"D:\\Mine\\Fleet\\API\\API AERIS\\controllers\\vehicle.js","function":null,"line":652,"method":null,"native":false},{"column":5,"file":"node:internal/process/task_queues","function":"processTicksAndRejections","line":96,"method":null,"native":false},{"column":18,"file":"D:\\Mine\\Fleet\\API\\API AERIS\\controllers\\vehicle.js","function":"async Object.ReadSelectedCategory1","line":576,"method":"ReadSelectedCategory1","native":false}]}
