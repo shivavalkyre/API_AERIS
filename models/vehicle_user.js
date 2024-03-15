@@ -13,7 +13,10 @@ const Vehicle_User = con.db.define('vehicle_users', {
     },
     userid: {
         type: DataTypes.INTEGER
-      }
+    },
+    sclid: {
+        type: DataTypes.STRING
+      },
   },{
     // Freeze Table Name
     freezeTableName: true

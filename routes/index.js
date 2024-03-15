@@ -176,29 +176,29 @@ router.delete('/api/patern/vehicles',Auth.authAccessToken,function (req, res){
 
 
 // Vehicle User ===============================================================
-// router.post('/api/patern/vehicle_user',Auth.authAccessToken,function(req,res){
-//     Vehicle_User.Create(req,res)
-// })
+router.post('/api/patern/vehicle_user',Auth.authAccessToken,function(req,res){
+    Vehicle_User.Create(req,res)
+})
 
-// router.get('/api/patern/vehicle_user',Auth.authAccessToken,function (req, res){
-//     Vehicle_User.Read(req,res)
-// })
+router.get('/api/patern/vehicle_user',Auth.authAccessToken,function (req, res){
+    Vehicle_User.Read(req,res)
+})
 
-// router.get('/api/patern/vehicle_user/all/:vehicleid',Auth.authAccessToken,function (req, res){
-//     Vehicle_User.ReadVehicleUsed(req,res)
-// })
+router.get('/api/patern/vehicle_user/all/:vehicleid',Auth.authAccessToken,function (req, res){
+    Vehicle_User.ReadVehicleUsed(req,res)
+})
 
-// router.get('/api/patern/vehicle_user/used/:vehicleid',Auth.authAccessToken,function (req, res){
-//     Vehicle_User.ReadUserVehicle(req,res)
-// })
+router.get('/api/patern/vehicle_user/used/:vehicleid',Auth.authAccessToken,function (req, res){
+    Vehicle_User.ReadUserVehicle(req,res)
+})
 
-// router.put('/api/patern/vehicle_user/:id',Auth.authAccessToken,function (req, res){
-//     Vehicle_User.Update(req,res)
-// })
+router.put('/api/patern/vehicle_user/:id',Auth.authAccessToken,function (req, res){
+    Vehicle_User.Update(req,res)
+})
 
-// router.delete('/api/patern/vehicle_user/:id',Auth.authAccessToken,function (req, res){
-//     Vehicle_User.Delete(req,res)
-// })
+router.delete('/api/patern/vehicle_user/:id',Auth.authAccessToken,function (req, res){
+    Vehicle_User.Delete(req,res)
+})
 
 // Geofence ===========================================================
 
