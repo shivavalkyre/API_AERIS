@@ -10,6 +10,7 @@ var Geofence = require('../controllers/geofence.js')
 var Notif = require('../controllers/notifikasi.js')
 var Assets = require('../controllers/assets.js')
 var Devices = require('../controllers/device.js')
+var Laporan = require('../controllers/laporan.js')
 var Auth = require('../controllers/auth.js')
 var util = require('util');
 var futil = require('../config/utility.js');
@@ -331,6 +332,24 @@ router.get('/api/patern/tasks',Auth.authAccessToken,function (req, res){
 router.get('/api/patern/tasks/:status',Auth.authAccessToken,function (req, res){
     Task.ReadTaskByStatus(req,res)
 })
+
+// ====================================== Generate Laporan ===========================
+
+router.get('/api/patern/laporan',Auth.authAccessToken,function (req, res){
+    Laporan.Daily(req,res)
+})
+
+// ====================================== End Generate Laporan =======================
+
+
+// ====================================== Daily Summary ==============================
+
+router.get('/api/patern/daily/:startDate/:endDate',Auth.authAccessToken,function (req,res){
+    Laporan.DailySummary(req,res)
+})
+
+
+// ====================================== End Daily Summary ==========================
 
 // router.get('/api/patern/tasks/:id',Auth.authAccessToken,function (req, res){
 //     Task.ReadTaskUser(req,res)
